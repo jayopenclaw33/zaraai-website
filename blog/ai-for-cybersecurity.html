@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Cybersecurity Professionals Are Using AI Right Now — ZaraAI</title>
+  <meta name="description" content="After 19 years in cybersecurity and 10 in Special Forces, Jax Scott breaks down exactly how AI is being used in real security work — not the vendor pitch version." />
+  <meta property="og:title" content="How Cybersecurity Professionals Are Using AI Right Now" />
+  <meta property="og:description" content="Real use cases, real experience. After 19 years in cybersecurity and 10 in Special Forces, here's how AI is actually being used in security work." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d0d0f; --bg2: #111114; --bg3: #16161a;
+      --surface: #1a1a1f; --surface2: #22222a;
+      --green: #00d4a0; --green-dim: #00b389;
+      --green-glow: rgba(0, 212, 160, 0.15);
+      --green-glow-strong: rgba(0, 212, 160, 0.3);
+      --purple: #7c3aed;
+      --text: #f0f0f5; --text-muted: #8888a0; --text-dim: #555568;
+      --border: rgba(255,255,255,0.06);
+      --border-accent: rgba(0, 212, 160, 0.2);
+      --radius: 12px; --radius-lg: 20px;
+      --font: 'Inter', sans-serif;
+      --font-heading: 'Space Grotesk', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.7; overflow-x: hidden; }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.4;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(1.5rem, 5vw, 3rem); height: 68px;
+      background: rgba(13,13,15,0.85); backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 0.4rem; letter-spacing: -0.02em; }
+    .nav-logo .zap { color: var(--green); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: var(--green); color: #000 !important; padding: 0.5rem 1.25rem; border-radius: 8px; font-weight: 600 !important; font-size: 0.875rem !important; transition: background 0.2s, transform 0.15s !important; }
+    .nav-cta:hover { background: var(--green-dim) !important; transform: translateY(-1px); color: #000 !important; }
+    .article-hero { padding: 8rem clamp(1.5rem, 5vw, 3rem) 3rem; max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+    .article-label { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--green-glow); border: 1px solid var(--border-accent); color: var(--green); padding: 0.35rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .article-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.25rem; }
+    .article-meta { display: flex; align-items: center; gap: 1.5rem; color: var(--text-muted); font-size: 0.875rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .article-meta span { display: flex; align-items: center; gap: 0.4rem; }
+    .article-body { max-width: 860px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 3rem) 5rem; position: relative; z-index: 1; }
+    .article-body h2 { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; letter-spacing: -0.02em; margin: 2.5rem 0 1rem; color: var(--text); }
+    .article-body h3 { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--green); }
+    .article-body p { margin-bottom: 1.25rem; color: #d0d0e0; font-size: 1.05rem; }
+    .article-body ul, .article-body ol { margin: 1rem 0 1.5rem 1.5rem; }
+    .article-body li { color: #d0d0e0; font-size: 1.05rem; margin-bottom: 0.5rem; }
+    .article-body strong { color: var(--text); }
+    .callout { background: var(--surface); border: 1px solid var(--border-accent); border-left: 3px solid var(--green); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .callout p { margin: 0; color: var(--text-muted); }
+    .callout strong { color: var(--green); }
+    .cta-box { background: linear-gradient(135deg, rgba(0,212,160,0.08) 0%, rgba(124,58,237,0.08) 100%); border: 1px solid var(--border-accent); border-radius: var(--radius-lg); padding: 2.5rem; text-align: center; margin: 3rem 0; }
+    .cta-box h3 { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text) !important; }
+    .cta-box p { color: var(--text-muted); margin-bottom: 1.5rem; }
+    .cta-btn { display: inline-block; background: var(--green); color: #000; font-weight: 700; font-size: 1rem; padding: 0.875rem 2rem; border-radius: 10px; text-decoration: none; transition: background 0.2s, transform 0.15s; margin: 0.4rem; }
+    .cta-btn:hover { background: var(--green-dim); transform: translateY(-2px); }
+    .cta-btn-secondary { display: inline-block; background: transparent; color: var(--green); font-weight: 600; font-size: 1rem; padding: 0.875rem 2rem; border-radius: 10px; text-decoration: none; border: 1px solid var(--border-accent); transition: background 0.2s, transform 0.15s; margin: 0.4rem; }
+    .cta-btn-secondary:hover { background: var(--green-glow); transform: translateY(-2px); }
+    footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 3rem clamp(1.5rem, 5vw, 3rem) 2rem; position: relative; z-index: 1; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p { color: var(--text-dim); font-size: 0.875rem; }
+    .footer-bottom-links { display: flex; gap: 1.5rem; }
+    .footer-bottom-links a { color: var(--text-dim); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: var(--green); }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-muted); text-decoration: none; font-size: 0.875rem; margin-bottom: 2rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--green); }
+    @media (max-width: 640px) { .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo"><span class="zap">⚡</span> ZaraAI</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#shop">Shop</a></li>
+      <li><a href="./index.html">Blog</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="https://thezaraai.beehiiv.com/subscribe" target="_blank" rel="noopener" class="nav-cta">Join Free ⚡</a></li>
+    </ul>
+  </nav>
+
+  <div class="article-hero">
+    <a href="./index.html" class="back-link">← Back to Blog</a>
+    <div class="article-label">🛡️ Cybersecurity + AI</div>
+    <h1 class="article-title">How Cybersecurity Professionals Are Using AI Right Now</h1>
+    <div class="article-meta">
+      <span>✍️ Jax Scott</span>
+      <span>📅 March 2025</span>
+      <span>⏱️ 8 min read</span>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <p>I've been in cybersecurity for 19 years. The last decade was spent as a Cyber Electronic Warfare Warrant Officer in U.S. Army Special Forces, running cyber operations in environments where getting it wrong had real consequences.</p>
+
+    <p>So when I tell you how AI is being used in cybersecurity, I'm not giving you the vendor pitch. I'm telling you what practitioners are actually doing — right now, in the trenches.</p>
+
+    <h2>The Real Gap Between Hype and Practice</h2>
+
+    <p>Most of the content about "AI in cybersecurity" is written by vendors selling something or analysts who've never run a 2am incident response. There's a huge gap between the marketing and what's actually useful.</p>
+
+    <p>The useful stuff isn't glamorous. It's not "AI will defeat nation-state attackers." It's "AI saved me 45 minutes on the incident report and let me focus on the part that actually required my judgment."</p>
+
+    <p>That's where the real value is. Let me break it down.</p>
+
+    <h2>Where AI Is Actually Helping Security Professionals</h2>
+
+    <h3>Threat Intelligence Summarization</h3>
+    <p>Security teams receive a constant stream of threat intel reports, IOC feeds, vulnerability advisories, and CISA alerts. Reading all of it thoroughly is impossible. AI is genuinely excellent at ingesting a 40-page threat actor profile and surfacing what's actually relevant to your environment.</p>
+    <p>The workflow: give the AI the report, your environment context, and ask it to identify the top 5 threats that apply to your org and why. What used to take hours of careful reading now takes minutes of targeted review.</p>
+
+    <h3>Alert Triage and SIEM Analysis</h3>
+    <p>Alert fatigue is real and it's a security risk. Teams tuning out because they've seen 500 false positives this week will miss the real one. AI can help filter noise, identify patterns across alerts, and give analysts better starting points for investigation.</p>
+    <p>It's not replacing analyst judgment — it's reducing the volume of "obviously not a threat" decisions so human attention can focus on the gray areas that actually need it.</p>
+
+    <h3>Incident Report Drafting</h3>
+    <p>After a long incident response, writing the report is brutal. You're exhausted, the details are still scattered across your notes and chats, and you still have to brief the CISO in the morning.</p>
+    <p>AI doesn't do the analysis. But given your notes, timeline, and findings, it can generate a structured first draft in minutes. You review, refine, and ensure accuracy. The time saved is significant — and you go into the briefing better prepared.</p>
+
+    <h3>Phishing Simulation and Security Awareness Training</h3>
+    <p>Creating realistic, role-tailored phishing scenarios for training is time-consuming. AI makes it fast. You can generate scenarios targeted at specific departments (finance, HR, executives) that reflect actual current tactics and lures.</p>
+    <p>Done right, this makes your training more effective and reduces the time your team spends building content from scratch.</p>
+
+    <h3>Vulnerability Analysis and Briefings</h3>
+    <p>When a critical CVE drops, you often need to brief non-technical stakeholders quickly — explaining what the vulnerability is, what it could mean for the organization, and what the recommended response is, all in language that doesn't require a security background to understand.</p>
+    <p>AI is extremely good at translating technical findings into clear, accurate executive-level language. This used to take me 30-45 minutes to write well. Now it takes 5 minutes to generate and 10 to refine.</p>
+
+    <h3>Threat Hunting Query Building</h3>
+    <p>Writing KQL, SPL, or SQL for threat hunting isn't everyone's strength, especially on teams with mixed skill levels. AI can help write and iterate detection logic faster, freeing up senior analysts to focus on hypothesis development rather than syntax.</p>
+
+    <h2>What AI Cannot Replace in Cybersecurity</h2>
+
+    <p>I want to be direct about this because it matters:</p>
+
+    <ul>
+      <li><strong>Contextual judgment about your specific environment</strong> — AI doesn't know your network topology, your business context, your risk tolerance, or your threat model the way a seasoned practitioner does.</li>
+      <li><strong>Adversarial thinking</strong> — Understanding attacker motivation, creativity, and adaptation requires human experience and intuition that AI can approximate but not replicate.</li>
+      <li><strong>Decision-making under pressure</strong> — Real incident response involves judgment calls with incomplete information, organizational dynamics, and time pressure. AI is a tool in that situation, not a decision-maker.</li>
+      <li><strong>Trust and communication</strong> — Telling a CEO their organization has been breached, navigating law enforcement interaction, managing legal exposure — these require human judgment, empathy, and experience.</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>The real risk isn't AI replacing cybersecurity jobs.</strong> It's cybersecurity professionals who don't adapt to using AI being outcompeted — and outpaced — by adversaries who have no such hesitation.</p>
+    </div>
+
+    <h2>The Biggest Mistake Security Teams Are Making</h2>
+
+    <p>I've seen two failure modes:</p>
+
+    <p><strong>Shadow adoption without policy:</strong> A few analysts quietly using ChatGPT on the side, feeding sensitive data into a consumer AI tool with no governance, no shared learning, no institutional benefit. This is how you get data exposure without even realizing it.</p>
+
+    <p><strong>Blanket prohibition:</strong> Leadership banning AI tools because of security concerns — while threat actors have no such constraints. Being more restricted than your adversary is not a defensible security posture.</p>
+
+    <p>The answer is neither. It's building a deliberate approach: establish which tools can handle which data classifications, build shared prompt libraries for common tasks, train the team — not just the technical staff — and treat AI adoption as a capability to develop, not a problem to avoid.</p>
+
+    <h2>Getting Practical: Start Here</h2>
+
+    <p>If you're a cybersecurity professional who wants to start using AI effectively in your work, here's the fastest path:</p>
+
+    <ol>
+      <li>Pick one repetitive task from your current week — a report, a briefing, an analysis</li>
+      <li>Use Claude or ChatGPT with a specific, detailed prompt that gives it your context</li>
+      <li>Review and refine the output</li>
+      <li>Note the time saved</li>
+      <li>Repeat with the next task</li>
+    </ol>
+
+    <p>The people building AI prompts tailored specifically to cybersecurity workflows — from threat intel to incident response to compliance documentation — are the ones pulling ahead right now.</p>
+
+    <div class="cta-box">
+      <h3>Purpose-built prompts for security professionals</h3>
+      <p>50+ AI prompts built from 19 years of real cybersecurity experience — threat intel, incident response, phishing simulation, executive briefings, and more.</p>
+      <a href="https://thezaraai.gumroad.com/l/qstadl" target="_blank" rel="noopener" class="cta-btn">🛡️ Cybersecurity Prompt Pack — $47</a>
+      <a href="https://thezaraai.gumroad.com/l/yphml" target="_blank" rel="noopener" class="cta-btn-secondary">⚡ AI Agent Starter Kit — $27</a>
+    </div>
+
+    <p>The question for every security practitioner right now isn't whether to use AI. It's whether you're going to build that capability deliberately — or reactively, after everyone else already has.</p>
+
+    <p>— Jax Scott | <a href="https://TheZaraAI.com" style="color: var(--green);">TheZaraAI.com</a></p>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p>© 2026 ZaraAI. Built with ⚡ by Zara.</p>
+        <div class="footer-bottom-links">
+          <a href="../index.html">Home</a>
+          <a href="./index.html">Blog</a>
+          <a href="mailto:thezaraai@gmail.com">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

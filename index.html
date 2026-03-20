@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZaraAI ⚡ — Your Personal AI Agent. Your Rules.</title>
-  <meta name="description" content="ZaraAI is your personal AI agent — intelligent, mystical, and built around you. Learn AI, build your future, and own the tools that change everything." />
-  <meta property="og:title" content="ZaraAI ⚡ — Your Personal AI Agent. Your Rules." />
-  <meta property="og:description" content="Your personal AI agent. Your rules. Join the ZaraAI community and get the free beginner's guide." />
+  <title>AI Agent Training &amp; Education | TheZaraAI.com — Learn AI Your Way</title>
+  <meta name="description" content="Learn how to build and use personal AI agents with TheZaraAI.com. Free beginner's guide, AI Agent Starter Kit, and Cybersecurity AI Prompt Pack. Start free today." />
+  <meta name="keywords" content="AI training, AI agent training, learn AI, AI for beginners, personal AI agent, cybersecurity AI, OpenClaw, AI education, AI tools, artificial intelligence training" />
+  <meta name="author" content="Jax Scott — TheZaraAI.com" />
+  <meta property="og:title" content="AI Agent Training &amp; Education | TheZaraAI.com — Learn AI Your Way" />
+  <meta property="og:description" content="Learn how to build and use personal AI agents with TheZaraAI.com. Free beginner's guide, AI Agent Starter Kit, and Cybersecurity AI Prompt Pack. Start free today." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://thezaraai.com/og-image.png" />
+  <meta property="og:url" content="https://thezaraai.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@the_ZaraAI" />
+  <meta name="twitter:title" content="AI Agent Training &amp; Education | TheZaraAI.com" />
+  <meta name="twitter:description" content="Learn how to build personal AI agents. Free guide + premium resources from a 19-year cybersecurity vet &amp; Special Forces officer." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="canonical" href="https://thezaraai.com/" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1430,7 +1439,134 @@
       background-clip: text;
       animation: shimmer 4s linear infinite;
     }
+  
+    /* ── BLOG GRID ── */
+    .blog-section {
+      padding: 6rem 0;
+      background: var(--bg2);
+    }
+
+    .blog-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .blog-header .section-desc { margin: 0 auto; }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .blog-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .blog-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px var(--green-glow);
+    }
+
+    .blog-card-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(0,212,160,0.08);
+      border: 1px solid rgba(0,212,160,0.15);
+      color: var(--green);
+      border-radius: 100px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+
+    .blog-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
+    }
+
+    .blog-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--green);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: auto;
+      transition: gap 0.2s;
+    }
+
+    .blog-card:hover .blog-card-link {
+      gap: 0.65rem;
+    }
+
+    @media (max-width: 640px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "TheZaraAI",
+    "url": "https://thezaraai.com",
+    "description": "AI agent training and education platform. Learn to build personal AI agents with free and premium resources.",
+    "founder": {
+      "@type": "Person",
+      "name": "Jax Scott",
+      "jobTitle": "AI Educator & Cybersecurity Expert"
+    },
+    "sameAs": [
+      "https://x.com/the_ZaraAI",
+      "https://instagram.com/the_Zaraai",
+      "https://thezaraai.gumroad.com"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "AI Agent Starter Kit",
+        "price": "27.00",
+        "priceCurrency": "USD",
+        "url": "https://thezaraai.gumroad.com/l/yphml"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cybersecurity AI Prompt Pack",
+        "price": "47.00",
+        "priceCurrency": "USD",
+        "url": "https://thezaraai.gumroad.com/l/qstadl"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1442,9 +1578,11 @@
     <ul class="nav-links" id="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="#shop">Shop</a></li>
+      <li><a href="#blog">Blog</a></li>
       <li><a href="#consulting">Work With Jax</a></li>
       <li><a href="#guide">Free Guide</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="blog/">Blog</a></li>
       <li><a href="https://thezaraai.beehiiv.com/subscribe" target="_blank" rel="noopener" class="nav-cta">Join Free ⚡</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu">
@@ -1818,6 +1956,82 @@
     </div>
   </section>
 
+  <div class="divider"></div>
+
+  <!-- BLOG -->
+  <section class="blog-section" id="blog">
+    <div class="section-inner">
+      <div class="blog-header">
+        <div class="section-label">Blog</div>
+        <h2 class="section-title">Learn AI — for free ⚡</h2>
+        <p class="section-desc">
+          Tutorials, guides, and deep dives on AI agents, cybersecurity AI, and building your personal AI setup.
+        </p>
+      </div>
+      <div class="blog-grid">
+
+        <a href="blog/what-is-an-ai-agent.html" class="blog-card">
+          <span class="blog-card-tag">🤖 AI Fundamentals</span>
+          <h3>What Is an AI Agent? (And Why You Need One)</h3>
+          <p>AI agents are more than chatbots — they plan, act, and remember. Learn what a personal AI agent actually does and how it differs from ChatGPT.</p>
+          <span class="blog-card-link">Read More →</span>
+        </a>
+
+        <a href="blog/ai-for-cybersecurity.html" class="blog-card">
+          <span class="blog-card-tag">🔐 Cybersecurity</span>
+          <h3>AI for Cybersecurity: Tools, Tactics & What's Working in 2025</h3>
+          <p>From threat intel to incident response, AI is reshaping cybersecurity. Here's what's actually working from a 19-year veteran's perspective.</p>
+          <span class="blog-card-link">Read More →</span>
+        </a>
+
+        <a href="blog/openclaw-getting-started.html" class="blog-card">
+          <span class="blog-card-tag">⚡ OpenClaw</span>
+          <h3>Getting Started with OpenClaw: The Beginner's Complete Guide</h3>
+          <p>Step-by-step OpenClaw tutorial for absolute beginners. Set up your first AI agent in under an hour — no coding required.</p>
+          <span class="blog-card-link">Read More →</span>
+        </a>
+
+        <a href="blog/ai-training-for-beginners.html" class="blog-card">
+          <span class="blog-card-tag">🎓 Beginners</span>
+          <h3>AI Training for Beginners: How to Learn AI Without a CS Degree</h3>
+          <p>You don't need a computer science degree to master AI. Here's the honest, practical path to learning AI — starting today, starting free.</p>
+          <span class="blog-card-link">Read More →</span>
+        </a>
+
+        <a href="blog/best-ai-tools-2025.html" class="blog-card">
+          <span class="blog-card-tag">🛠️ Tools</span>
+          <h3>The Best AI Tools of 2025 (That Actually Work)</h3>
+          <p>Tired of AI hype? These are the tools that actually deliver — ranked and reviewed by someone who uses AI professionally every day.</p>
+          <span class="blog-card-link">Read More →</span>
+        </a>
+
+        <a href="blog/ai-agent-vs-chatgpt.html" class="blog-card">
+          <span class="blog-card-tag">🤔 Comparison</span>
+          <h3>AI Agent vs ChatGPT: What's the Difference and Which Do You Need?</h3>
+          <p>ChatGPT is a conversation. An AI agent is a teammate. Here's the real difference — and how to know which one is right for your goals.</p>
+          <span class="blog-card-link">Read More →</span>
+        </a>
+
+        <a href="blog/cybersecurity-prompts-ai.html" class="blog-card">
+          <span class="blog-card-tag">🛡️ Prompts</span>
+          <h3>50 AI Prompts Every Cybersecurity Professional Needs</h3>
+          <p>Battle-tested AI prompts for threat intel, incident response, red teaming, and more — built from 19 years of real-world cyber experience.</p>
+          <span class="blog-card-link">Read More →</span>
+        </a>
+
+        <a href="blog/personal-ai-assistant-setup.html" class="blog-card">
+          <span class="blog-card-tag">⚙️ Setup Guide</span>
+          <h3>How to Set Up Your Personal AI Assistant in Under an Hour</h3>
+          <p>A practical, step-by-step guide to getting your own personal AI assistant running today — no technical background required.</p>
+          <span class="blog-card-link">Read More →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- EMAIL SIGNUP -->
   <section class="signup-section">
     <div class="signup-inner">
@@ -1833,6 +2047,42 @@
       <p class="signup-note">No spam. Unsubscribe anytime. Powered by Beehiiv.</p>
     </div>
   </section>
+
+  <!-- BLOG PREVIEW -->
+  <section style="padding: 5rem clamp(1.5rem,5vw,3rem); position: relative; z-index:1;" id="blog">
+    <div style="max-width:1200px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:3rem;">
+        <div class="section-label" style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--green-glow); border:1px solid var(--border-accent); color:var(--green); padding:0.35rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:1.25rem;">✍️ From the Blog</div>
+        <h2 style="font-family:var(--font-heading); font-size:clamp(2rem,4vw,2.75rem); font-weight:800; letter-spacing:-0.03em; margin-bottom:0.75rem;">AI Education. No Fluff.</h2>
+        <p style="color:var(--text-muted); font-size:1.05rem; max-width:560px; margin:0 auto;">Practical guides and real talk from 19 years in cybersecurity and on the AI frontier.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:1.5rem; margin-bottom:2.5rem;">
+        <a href="blog/what-is-an-ai-agent.html" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:1.75rem; text-decoration:none; display:block; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(0,212,160,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="display:inline-block; background:var(--green-glow); color:var(--green); font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:1rem;">⚡ AI Education</div>
+          <h3 style="font-family:var(--font-heading); font-size:1.2rem; font-weight:700; line-height:1.3; color:var(--text); margin-bottom:0.75rem;">What Is an AI Agent? (And Why You Need One in 2025)</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; margin-bottom:1rem;">ChatGPT is a conversation. An AI agent is a worker. Here's the real difference and why it matters.</p>
+          <span style="color:var(--green); font-size:0.875rem; font-weight:600;">Read article →</span>
+        </a>
+        <a href="blog/ai-for-cybersecurity.html" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:1.75rem; text-decoration:none; display:block; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(0,212,160,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="display:inline-block; background:var(--green-glow); color:var(--green); font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:1rem;">🛡️ Cybersecurity + AI</div>
+          <h3 style="font-family:var(--font-heading); font-size:1.2rem; font-weight:700; line-height:1.3; color:var(--text); margin-bottom:0.75rem;">How Cybersecurity Professionals Are Using AI Right Now</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; margin-bottom:1rem;">Not the vendor pitch. Real use cases from 19 years in the field and 10 in Special Forces cyber.</p>
+          <span style="color:var(--green); font-size:0.875rem; font-weight:600;">Read article →</span>
+        </a>
+        <a href="blog/openclaw-getting-started.html" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:1.75rem; text-decoration:none; display:block; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(0,212,160,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+          <div style="display:inline-block; background:var(--green-glow); color:var(--green); font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:1rem;">⚡ OpenClaw Guide</div>
+          <h3 style="font-family:var(--font-heading); font-size:1.2rem; font-weight:700; line-height:1.3; color:var(--text); margin-bottom:0.75rem;">Getting Started with OpenClaw: A Beginner's Guide</h3>
+          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; margin-bottom:1rem;">Step-by-step guide to getting your first personal AI agent running. No technical background required.</p>
+          <span style="color:var(--green); font-size:0.875rem; font-weight:600;">Read article →</span>
+        </a>
+      </div>
+      <div style="text-align:center;">
+        <a href="blog/" style="display:inline-block; background:transparent; color:var(--green); border:1px solid var(--border-accent); padding:0.875rem 2rem; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.95rem; transition:background 0.2s;" onmouseover="this.style.background='var(--green-glow)'" onmouseout="this.style.background='transparent'">View All Posts →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
 
   <!-- FOOTER -->
   <footer>
