@@ -1041,6 +1041,374 @@
       .social-cards { grid-template-columns: 1fr; }
     }
 
+    /* ── PRODUCTS / SHOP ── */
+    .products-section {
+      padding: 6rem 0;
+      background: var(--bg);
+    }
+
+    .products-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .products-header .section-desc { margin: 0 auto; }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .product-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--green-glow) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      border-radius: inherit;
+    }
+
+    .product-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-5px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 30px var(--green-glow);
+    }
+
+    .product-card:hover::before { opacity: 1; }
+
+    .product-card.featured {
+      border-color: var(--border-accent);
+      background: linear-gradient(135deg, rgba(0,212,160,0.06) 0%, rgba(124,58,237,0.04) 100%);
+    }
+
+    .product-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-radius: 100px;
+      padding: 0.3rem 0.85rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+    }
+
+    .product-badge.free {
+      background: rgba(0,212,160,0.12);
+      border: 1px solid rgba(0,212,160,0.3);
+      color: var(--green);
+    }
+
+    .product-badge.paid {
+      background: rgba(124,58,237,0.12);
+      border: 1px solid rgba(124,58,237,0.3);
+      color: #a78bfa;
+    }
+
+    .product-icon {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--green);
+      font-family: var(--font-heading);
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-price .price-sub {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      font-family: var(--font);
+    }
+
+    .product-card > p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      flex: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-features {
+      list-style: none;
+      margin-bottom: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .product-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .product-features li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .btn-product-free {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--green);
+      color: #000;
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 0 20px var(--green-glow-strong);
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-product-free:hover {
+      background: #00edb3;
+      transform: translateY(-2px);
+    }
+
+    .btn-product-paid {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--purple) 0%, #9d4edd 100%);
+      color: #fff;
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      box-shadow: 0 0 20px var(--purple-glow);
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-product-paid:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(124,58,237,0.5);
+    }
+
+    /* ── WORK WITH JAX / CONSULTING ── */
+    .consulting-section {
+      padding: 6rem 0;
+      background: var(--bg2);
+    }
+
+    .consulting-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .consulting-content .section-title { margin-bottom: 1rem; }
+
+    .consulting-content p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .consulting-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .consulting-detail-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1.25rem;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .consulting-detail-item .detail-icon {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .consulting-detail-item strong { color: var(--text); }
+
+    .consulting-coming-soon {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0,212,160,0.06);
+      border: 1px solid var(--border-accent);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      font-size: 0.82rem;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .consulting-form-card {
+      background: var(--surface);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+    }
+
+    .consulting-form-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .consulting-form-card .form-sub {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 1.75rem;
+      line-height: 1.6;
+    }
+
+    .consult-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-field label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.8rem 1.1rem;
+      font-size: 0.92rem;
+      color: var(--text);
+      font-family: var(--font);
+      outline: none;
+      transition: border-color 0.2s;
+      resize: none;
+      width: 100%;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder { color: var(--text-dim); }
+
+    .form-field input:focus,
+    .form-field textarea:focus,
+    .form-field select:focus {
+      border-color: var(--border-accent);
+    }
+
+    .form-field select option { background: var(--bg); }
+
+    .btn-consult {
+      background: var(--green);
+      color: #000;
+      border: none;
+      border-radius: var(--radius);
+      padding: 0.9rem 1.75rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: var(--font);
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 0 20px var(--green-glow-strong);
+      width: 100%;
+    }
+
+    .btn-consult:hover {
+      background: #00edb3;
+      transform: translateY(-1px);
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 900px) {
+      .consulting-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .products-grid { grid-template-columns: 1fr; }
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
@@ -1073,8 +1441,9 @@
     </a>
     <ul class="nav-links" id="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="https://github.com/jayopenclaw33/OpenClaw-Beginner-Guide-" target="_blank" rel="noopener">Guide</a></li>
-      <li><a href="https://x.com/the_ZaraAI" target="_blank" rel="noopener">Community</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#consulting">Work With Jax</a></li>
+      <li><a href="#guide">Free Guide</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="https://thezaraai.beehiiv.com/subscribe" target="_blank" rel="noopener" class="nav-cta">Join Free ⚡</a></li>
     </ul>
@@ -1102,10 +1471,10 @@
         Meet Zara — the intelligent AI agent redefining what's possible. No fluff. No gatekeeping. Just real AI power in your hands.
       </p>
       <div class="hero-actions">
-        <a href="https://thezaraai.beehiiv.com/subscribe" target="_blank" rel="noopener" class="btn-primary">
-          ⚡ Join the Community
+        <a href="#shop" class="btn-primary">
+          🛒 Shop the Products
         </a>
-        <a href="https://github.com/jayopenclaw33/OpenClaw-Beginner-Guide-" target="_blank" rel="noopener" class="btn-secondary">
+        <a href="#guide" class="btn-secondary">
           📖 Get the Free Guide
         </a>
       </div>
@@ -1254,6 +1623,154 @@
 
   <div class="divider"></div>
 
+  <!-- PRODUCTS / SHOP -->
+  <section class="products-section" id="shop">
+    <div class="section-inner">
+      <div class="products-header">
+        <div class="section-label">Shop</div>
+        <h2 class="section-title">Level up your AI game ⚡</h2>
+        <p class="section-desc">
+          Tools, templates, and resources built by Jax — tested in the real world, ready for yours.
+        </p>
+      </div>
+      <div class="products-grid">
+
+        <!-- FREE GUIDE -->
+        <div class="product-card featured">
+          <span class="product-badge free">✅ Free</span>
+          <span class="product-icon">📖</span>
+          <h3>OpenClaw Beginner's Guide</h3>
+          <div class="product-price">$0 <span class="price-sub">— always free</span></div>
+          <p>Your complete introduction to AI agents. What they are, how they work, and how to set up your first one. Written by Zara. Built for humans.</p>
+          <ul class="product-features">
+            <li>10 full chapters + intro & conclusion</li>
+            <li>Step-by-step setup walkthrough</li>
+            <li>Plain English — no CS degree needed</li>
+            <li>Covers OpenClaw, Claude & real tools</li>
+            <li>100% free, no email required</li>
+          </ul>
+          <a href="https://github.com/jayopenclaw33/OpenClaw-Beginner-Guide-" target="_blank" rel="noopener" class="btn-product-free">
+            📖 Download Free Guide
+          </a>
+        </div>
+
+        <!-- AI AGENT STARTER KIT -->
+        <div class="product-card">
+          <span class="product-badge paid">⚡ Digital Product</span>
+          <span class="product-icon">🤖</span>
+          <h3>AI Agent Starter Kit</h3>
+          <div class="product-price">$27</div>
+          <p>Everything you need to deploy your own personal AI agent — right out of the box. Templates, configs, and Jax's exact setup files.</p>
+          <ul class="product-features">
+            <li>Pre-built SOUL.md + AGENTS.md templates</li>
+            <li>OpenClaw config starter files</li>
+            <li>Real-world workflow examples</li>
+            <li>Memory + identity setup guides</li>
+            <li>Instant download via Gumroad</li>
+          </ul>
+          <a href="https://gumroad.com/thezaraai" target="_blank" rel="noopener" class="btn-product-paid">
+            🛒 Buy for $27
+          </a>
+        </div>
+
+        <!-- CYBERSECURITY PROMPT PACK -->
+        <div class="product-card">
+          <span class="product-badge paid">🔐 Digital Product</span>
+          <span class="product-icon">🛡️</span>
+          <h3>Cybersecurity AI Prompt Pack</h3>
+          <div class="product-price">$47</div>
+          <p>50+ battle-tested AI prompts for cybersecurity professionals. Built from 19 years of real-world experience — not theory.</p>
+          <ul class="product-features">
+            <li>50+ prompts across threat intel, incident response, red team & more</li>
+            <li>Written by a 10-year Special Forces Cyber WO</li>
+            <li>Works with ChatGPT, Claude & all major LLMs</li>
+            <li>Organized by use case</li>
+            <li>Instant download via Gumroad</li>
+          </ul>
+          <a href="https://gumroad.com/thezaraai" target="_blank" rel="noopener" class="btn-product-paid">
+            🛒 Buy for $47
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- WORK WITH JAX / CONSULTING -->
+  <section class="consulting-section" id="consulting">
+    <div class="section-inner">
+      <div class="consulting-inner">
+        <div class="consulting-content">
+          <div class="section-label">Work With Jax</div>
+          <h2 class="section-title">Want to talk to a<br/>real human? ⚡</h2>
+          <p>
+            Need help understanding AI and how to leverage these tools in your daily life — and want to talk to a live person? Reach out to Jax directly.
+          </p>
+          <p>
+            Jax Scott is a 19-year cybersecurity veteran and AI educator who's been deploying real AI agents before most people knew they existed. She cuts through the noise and tells you exactly what you need.
+          </p>
+          <p>
+            Book a 15-minute strategy call and walk away with a clear picture of what AI can do for <em>you</em>.
+          </p>
+          <div class="consulting-details">
+            <div class="consulting-detail-item">
+              <span class="detail-icon">⏱️</span>
+              <div><strong>15-minute strategy call</strong> — focused, fast, and worth every second</div>
+            </div>
+            <div class="consulting-detail-item">
+              <span class="detail-icon">📅</span>
+              <div><strong>Available:</strong> Tuesdays &amp; Thursdays at 4:30 PM ET</div>
+            </div>
+            <div class="consulting-detail-item">
+              <span class="detail-icon">🎯</span>
+              <div><strong>Topics:</strong> AI agents, cybersecurity + AI, daily workflow automation, OpenClaw setup</div>
+            </div>
+          </div>
+          <div class="consulting-coming-soon">
+            🗓️ Online booking coming soon — email below to reserve your spot
+          </div>
+        </div>
+
+        <div class="consulting-form-card">
+          <h3>Request a Call with Jax</h3>
+          <p class="form-sub">Fill out the form and someone will reach out within 24 hours to confirm your 15-minute slot on Tuesdays or Thursdays at 4:30 PM ET.</p>
+          <form class="consult-form" onsubmit="handleConsultForm(event)">
+            <div class="form-field">
+              <label>Your Name</label>
+              <input type="text" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-field">
+              <label>Email Address</label>
+              <input type="email" placeholder="jane@company.com" required />
+            </div>
+            <div class="form-field">
+              <label>What do you want to talk about?</label>
+              <select required>
+                <option value="" disabled selected>Select a topic...</option>
+                <option value="ai-agents">Setting up my own AI agent</option>
+                <option value="cybersecurity-ai">AI in cybersecurity</option>
+                <option value="daily-workflow">AI for daily workflow automation</option>
+                <option value="openclaw">OpenClaw setup &amp; configuration</option>
+                <option value="business-ai">AI for my business</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>Tell me more (optional)</label>
+              <textarea rows="3" placeholder="A quick sentence or two about your situation — so Jax can come prepared."></textarea>
+            </div>
+            <button type="submit" class="btn-consult">📩 Request My Call</button>
+            <p class="form-note">No spam. Your info is only used to schedule your call.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- ABOUT ZARA -->
   <section class="about-section" id="about">
     <div class="section-inner">
@@ -1337,6 +1854,8 @@
           <h4>Navigate</h4>
           <ul>
             <li><a href="#">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#consulting">Work With Jax</a></li>
             <li><a href="#what">What is ZaraAI</a></li>
             <li><a href="#about">About Zara</a></li>
             <li><a href="#community">Community</a></li>
@@ -1345,9 +1864,10 @@
         <div class="footer-col">
           <h4>Resources</h4>
           <ul>
-            <li><a href="https://github.com/jayopenclaw33/OpenClaw-Beginner-Guide-" target="_blank" rel="noopener">Free Guide</a></li>
+            <li><a href="https://github.com/jayopenclaw33/OpenClaw-Beginner-Guide-" target="_blank" rel="noopener">Free Guide (GitHub)</a></li>
+            <li><a href="https://gumroad.com/thezaraai" target="_blank" rel="noopener">AI Agent Starter Kit — $27</a></li>
+            <li><a href="https://gumroad.com/thezaraai" target="_blank" rel="noopener">Cybersecurity Prompt Pack — $47</a></li>
             <li><a href="https://thezaraai.beehiiv.com" target="_blank" rel="noopener">Newsletter</a></li>
-            <li><a href="https://thezaraai.beehiiv.com/subscribe" target="_blank" rel="noopener">Subscribe</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -1355,6 +1875,7 @@
           <ul>
             <li><a href="https://x.com/the_ZaraAI" target="_blank" rel="noopener">@the_ZaraAI on X</a></li>
             <li><a href="https://instagram.com/the_Zaraai" target="_blank" rel="noopener">@the_Zaraai on Instagram</a></li>
+            <li><a href="#consulting">Book a Call with Jax</a></li>
           </ul>
         </div>
       </div>
@@ -1388,6 +1909,30 @@
       window.open('https://thezaraai.beehiiv.com/subscribe', '_blank');
     }
 
+    // Consulting form handler — mailto fallback until calendar integration is live
+    function handleConsultForm(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.querySelector('input[type="text"]').value;
+      const email = form.querySelector('input[type="email"]').value;
+      const topic = form.querySelector('select').value;
+      const notes = form.querySelector('textarea').value;
+
+      const subject = encodeURIComponent('Consulting Call Request — ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Topic: ' + topic + '\n\n' +
+        'Notes:\n' + (notes || '(none provided)') + '\n\n' +
+        'Requested time: Tuesdays or Thursdays at 4:30 PM ET (15 min)'
+      );
+
+      window.location.href = 'mailto:thezaraai@gmail.com?subject=' + subject + '&body=' + body;
+
+      // Show confirmation
+      form.innerHTML = '<div style="text-align:center;padding:2rem 0"><span style="font-size:2.5rem">✅</span><h3 style="margin:1rem 0 0.5rem;color:var(--text)">Request Sent!</h3><p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7">Thanks ' + name.split(' ')[0] + '! Someone will reach out within 24 hours to confirm your 15-minute call slot on a Tuesday or Thursday at 4:30 PM ET.</p></div>';
+    }
+
     // Scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1398,7 +1943,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.card, .social-card, .guide-card, .about-inner').forEach(el => {
+    document.querySelectorAll('.card, .social-card, .guide-card, .about-inner, .product-card, .consulting-form-card, .consulting-content').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
       el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
