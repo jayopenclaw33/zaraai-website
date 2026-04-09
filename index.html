@@ -3,48 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Agent Training &amp; Education | TheZaraAI.com — Learn AI Your Way</title>
-  <meta name="description" content="Learn how to build and use personal AI agents with TheZaraAI.com. Free beginner's guide, AI Agent Starter Kit, and Cybersecurity AI Prompt Pack. Start free today." />
-  <meta name="keywords" content="AI training, AI agent training, learn AI, AI for beginners, personal AI agent, cybersecurity AI, OpenClaw, AI education, AI tools, artificial intelligence training" />
-  <meta name="author" content="Jax Scott — TheZaraAI.com" />
-  <meta property="og:title" content="AI Agent Training &amp; Education | TheZaraAI.com — Learn AI Your Way" />
-  <meta property="og:description" content="Learn how to build and use personal AI agents with TheZaraAI.com. Free beginner's guide, AI Agent Starter Kit, and Cybersecurity AI Prompt Pack. Start free today." />
+  <title>ZaraAI ⚡ — AI Automation Consulting for Modern Businesses</title>
+  <meta name="description" content="ZaraAI helps businesses automate operations, streamline workflows, and integrate AI — built by a cybersecurity veteran and Army Special Forces officer. Start your free trial today." />
+  <meta name="author" content="Jax Scott — ZaraAI" />
+  <meta property="og:title" content="ZaraAI ⚡ — AI Automation Consulting" />
+  <meta property="og:description" content="Stop doing manually what AI can do for you. Automation consulting from a cybersecurity vet with 10+ years Army SF experience." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://thezaraai.com/og-image.png" />
   <meta property="og:url" content="https://thezaraai.com" />
+  <meta property="og:image" content="https://thezaraai.com/assets/zara-og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@the_ZaraAI" />
-  <meta name="twitter:title" content="AI Agent Training &amp; Education | TheZaraAI.com" />
-  <meta name="twitter:description" content="Learn how to build personal AI agents. Free guide + premium resources from a 19-year cybersecurity vet &amp; Special Forces officer." />
+  <meta name="twitter:image" content="https://thezaraai.com/assets/zara-og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="canonical" href="https://thezaraai.com/" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
   <style>
+    /* ═══════════════════════════════════════════
+       RESET & CUSTOM PROPERTIES
+    ═══════════════════════════════════════════ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0d0d0f;
-      --bg2: #111114;
-      --bg3: #16161a;
-      --surface: #1a1a1f;
-      --surface2: #22222a;
-      --green: #00d4a0;
-      --green-dim: #00b389;
-      --green-glow: rgba(0, 212, 160, 0.15);
-      --green-glow-strong: rgba(0, 212, 160, 0.3);
-      --purple: #7c3aed;
-      --purple-dim: #6d28d9;
-      --purple-glow: rgba(124, 58, 237, 0.2);
-      --text: #f0f0f5;
-      --text-muted: #8888a0;
-      --text-dim: #555568;
-      --border: rgba(255,255,255,0.06);
-      --border-accent: rgba(0, 212, 160, 0.2);
-      --radius: 12px;
+      /* Backgrounds */
+      --bg:        #0b0f1a;
+      --bg2:       #0e1422;
+      --bg3:       #111827;
+      --surface:   rgba(255,255,255,0.04);
+      --surface-hover: rgba(255,255,255,0.07);
+
+      /* Accent — electric blue/cyan */
+      --blue:      #3B82F6;
+      --blue-dim:  #2563EB;
+      --cyan:      #06B6D4;
+      --cyan-dim:  #0891B2;
+      --glow-blue: rgba(59, 130, 246, 0.18);
+      --glow-cyan: rgba(6, 182, 212, 0.18);
+
+      /* Text */
+      --text:      #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-dim:  #4B5563;
+
+      /* Borders */
+      --border:    rgba(255,255,255,0.07);
+      --border-accent: rgba(59,130,246,0.3);
+
+      /* Gradients */
+      --grad-hero:  linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+      --grad-card:  linear-gradient(135deg, rgba(59,130,246,0.12) 0%, rgba(6,182,212,0.08) 100%);
+
+      /* Spacing & Radius */
+      --radius:    12px;
       --radius-lg: 20px;
-      --font: 'Inter', sans-serif;
-      --font-heading: 'Space Grotesk', sans-serif;
+      --radius-xl: 28px;
+      --section-pad: clamp(5rem, 10vw, 8rem);
+
+      /* Typography */
+      --font:      'Inter', system-ui, sans-serif;
+      --font-head: 'Space Grotesk', system-ui, sans-serif;
     }
 
     html { scroll-behavior: smooth; }
@@ -53,84 +71,193 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--font);
-      line-height: 1.6;
+      line-height: 1.65;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* ── NOISE OVERLAY ── */
+    /* Subtle noise texture overlay */
     body::before {
       content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 0;
-      opacity: 0.4;
     }
 
-    /* ── NAV ── */
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+    ul { list-style: none; }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 2.5rem);
+    }
+
+    /* ═══════════════════════════════════════════
+       UTILITY CLASSES
+    ═══════════════════════════════════════════ */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.875rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.3);
+      color: var(--blue);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-family: var(--font);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--grad-hero);
+      color: #fff;
+      box-shadow: 0 0 24px rgba(59,130,246,0.35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 36px rgba(59,130,246,0.5);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-accent);
+    }
+    .btn-outline:hover {
+      background: rgba(59,130,246,0.08);
+      border-color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover {
+      background: var(--surface-hover);
+      color: var(--text);
+    }
+
+    .section-label {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: var(--text);
+      text-align: center;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 580px;
+      margin: 0.875rem auto 0;
+      line-height: 1.7;
+    }
+
+    .gradient-text {
+      background: var(--grad-hero);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ═══════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════ */
     nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 66px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 clamp(1.5rem, 5vw, 3rem);
-      height: 68px;
-      background: rgba(13,13,15,0.85);
+      background: rgba(11,15,26,0.80);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 5vw, 2.5rem);
     }
 
     .nav-logo {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
+      font-family: var(--font-head);
+      font-size: 1.35rem;
       font-weight: 700;
       color: var(--text);
-      text-decoration: none;
+      letter-spacing: -0.02em;
       display: flex;
       align-items: center;
-      gap: 0.4rem;
-      letter-spacing: -0.02em;
+      gap: 0.3rem;
     }
-
-    .nav-logo .zap { color: var(--green); }
+    .nav-logo .zap { color: var(--blue); font-style: normal; }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 2rem;
-      list-style: none;
+      gap: 0.25rem;
     }
-
     .nav-links a {
       color: var(--text-muted);
-      text-decoration: none;
       font-size: 0.9rem;
       font-weight: 500;
-      transition: color 0.2s;
+      padding: 0.4rem 0.875rem;
+      border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
     }
-
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover { color: var(--text); background: var(--surface); }
 
     .nav-cta {
-      background: var(--green);
-      color: #000 !important;
-      padding: 0.5rem 1.25rem;
+      background: var(--blue);
+      color: #fff !important;
+      padding: 0.5rem 1.1rem;
       border-radius: 8px;
       font-weight: 600 !important;
       font-size: 0.875rem !important;
-      transition: background 0.2s, transform 0.15s !important;
+      transition: all 0.2s !important;
     }
-
     .nav-cta:hover {
-      background: var(--green-dim) !important;
+      background: var(--blue-dim) !important;
       transform: translateY(-1px);
-      color: #000 !important;
+      box-shadow: 0 4px 16px rgba(59,130,246,0.4);
     }
 
     .hamburger {
@@ -140,2064 +267,1897 @@
       cursor: pointer;
       background: none;
       border: none;
-      padding: 4px;
+      padding: 6px;
     }
-
     .hamburger span {
       display: block;
-      width: 22px;
-      height: 2px;
+      width: 22px; height: 2px;
       background: var(--text);
       border-radius: 2px;
       transition: 0.3s;
     }
 
-    /* ── HERO ── */
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 66px; left: 0; right: 0;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem 1.5rem;
+      flex-direction: column;
+      gap: 0.25rem;
+      z-index: 999;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--text-muted);
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.625rem 0.5rem;
+      border-radius: 8px;
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--text); }
+    .mobile-menu .btn { margin-top: 0.75rem; justify-content: center; }
+
+    /* ═══════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════ */
     .hero {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 8rem clamp(1.5rem, 5vw, 3rem) 5rem;
+      padding: calc(66px + 4rem) clamp(1.25rem, 5vw, 2.5rem) 5rem;
       position: relative;
       overflow: hidden;
     }
 
-    .hero-bg {
+    /* Background orbs */
+    .hero::before, .hero::after {
+      content: '';
       position: absolute;
-      inset: 0;
-      z-index: 0;
+      border-radius: 50%;
+      filter: blur(80px);
       pointer-events: none;
     }
-
-    .hero-orb-1 {
-      position: absolute;
-      width: 700px;
-      height: 700px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--green-glow-strong) 0%, transparent 70%);
-      top: -200px;
-      left: 50%;
+    .hero::before {
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 65%);
+      top: -200px; left: 50%;
       transform: translateX(-50%);
-      filter: blur(60px);
+    }
+    .hero::after {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(6,182,212,0.12) 0%, transparent 65%);
+      bottom: 0; right: -100px;
     }
 
-    .hero-orb-2 {
+    .hero-orb-left {
       position: absolute;
-      width: 500px;
-      height: 500px;
+      width: 350px; height: 350px;
       border-radius: 50%;
-      background: radial-gradient(circle, var(--purple-glow) 0%, transparent 70%);
-      bottom: 0;
-      right: -100px;
-      filter: blur(80px);
-    }
-
-    .hero-orb-3 {
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--purple-glow) 0%, transparent 70%);
-      bottom: 100px;
-      left: -50px;
+      background: radial-gradient(circle, rgba(59,130,246,0.10) 0%, transparent 65%);
+      bottom: 100px; left: -50px;
       filter: blur(60px);
+      pointer-events: none;
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 800px;
+      max-width: 820px;
     }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(0, 212, 160, 0.08);
-      border: 1px solid var(--border-accent);
-      color: var(--green);
-      padding: 0.4rem 1rem;
-      border-radius: 100px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
+    .hero-eyebrow {
+      margin-bottom: 1.5rem;
     }
 
     .hero h1 {
-      font-family: var(--font-heading);
-      font-size: clamp(2.6rem, 7vw, 5.5rem);
-      font-weight: 700;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.5rem;
+      font-family: var(--font-head);
+      font-size: clamp(2.6rem, 6vw, 4.25rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 1.375rem;
       color: var(--text);
     }
 
-    .hero h1 .highlight {
-      background: linear-gradient(135deg, var(--green) 0%, #00ffcc 50%, var(--purple) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
     .hero-sub {
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
       color: var(--text-muted);
-      max-width: 560px;
+      max-width: 580px;
       margin: 0 auto 2.5rem;
       line-height: 1.7;
-      font-weight: 400;
     }
 
     .hero-actions {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+      align-items: center;
       justify-content: center;
-      margin-bottom: 3.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
-    .btn-primary {
-      display: inline-flex;
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 2rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
-      background: var(--green);
-      color: #000;
-      padding: 0.875rem 2rem;
-      border-radius: var(--radius);
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 0 30px var(--green-glow-strong);
+      gap: 0.4rem;
+      color: var(--text-dim);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
     }
 
-    .btn-primary:hover {
-      background: #00edb3;
-      transform: translateY(-2px);
-      box-shadow: 0 0 50px var(--green-glow-strong);
+    /* ═══════════════════════════════════════════
+       SOCIAL PROOF BAR
+    ═══════════════════════════════════════════ */
+    .proof-bar {
+      padding: 1.75rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.015);
+      position: relative;
+      z-index: 1;
     }
 
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: transparent;
-      color: var(--text);
-      padding: 0.875rem 2rem;
-      border-radius: var(--radius);
-      font-weight: 600;
-      font-size: 1rem;
-      text-decoration: none;
-      border: 1px solid var(--border);
-      transition: all 0.2s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--border-accent);
-      background: var(--green-glow);
-      color: var(--green);
-    }
-
-    .hero-social-proof {
+    .proof-bar-inner {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
       justify-content: center;
+      gap: clamp(1.5rem, 4vw, 3.5rem);
       flex-wrap: wrap;
     }
 
-    .hero-social-proof-item {
+    .proof-item {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       color: var(--text-muted);
       font-size: 0.875rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .proof-item i { color: var(--blue); flex-shrink: 0; }
+    .proof-divider {
+      width: 1px; height: 22px;
+      background: var(--border);
     }
 
-    .hero-social-proof-item .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      animation: pulse-dot 2s infinite;
-    }
-
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    /* ── SECTION SHARED ── */
-    section {
+    /* ═══════════════════════════════════════════
+       SERVICES
+    ═══════════════════════════════════════════ */
+    .services {
+      padding: var(--section-pad) 0;
       position: relative;
-      z-index: 1;
     }
 
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 clamp(1.5rem, 5vw, 3rem);
-    }
-
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--green);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 2px;
-      background: var(--green);
-    }
-
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-      color: var(--text);
-    }
-
-    .section-desc {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 540px;
-      line-height: 1.7;
-    }
-
-    /* ── WHAT IS ZARAAI ── */
-    .what-section {
-      padding: 6rem 0;
-      background: linear-gradient(to bottom, var(--bg), var(--bg2));
-    }
-
-    .what-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .what-header .section-desc {
-      margin: 0 auto;
-    }
-
-    .cards-grid {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
+      margin-top: 3.5rem;
     }
 
-    .card {
+    .service-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 2rem;
-      transition: all 0.3s;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
       position: relative;
       overflow: hidden;
     }
-
-    .card::before {
+    .service-card::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, var(--green-glow) 0%, transparent 60%);
+      background: var(--grad-card);
       opacity: 0;
       transition: opacity 0.3s;
       border-radius: inherit;
     }
-
-    .card:hover {
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(59,130,246,0.15);
       border-color: var(--border-accent);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px var(--green-glow);
     }
+    .service-card:hover::before { opacity: 1; }
 
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    .card-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 12px;
-      background: var(--green-glow);
-      border: 1px solid var(--border-accent);
+    .service-icon {
+      width: 52px; height: 52px;
+      border-radius: var(--radius);
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.2);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
       margin-bottom: 1.25rem;
+      color: var(--blue);
       position: relative;
-      z-index: 1;
     }
 
-    .card h3 {
-      font-family: var(--font-heading);
+    .service-card h3 {
+      font-family: var(--font-head);
       font-size: 1.2rem;
       font-weight: 700;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.625rem;
       color: var(--text);
       position: relative;
-      z-index: 1;
     }
 
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* ── SOCIAL PROOF ── */
-    .social-section {
-      padding: 6rem 0;
-      background: var(--bg2);
-    }
-
-    .social-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .social-header .section-desc { margin: 0 auto; }
-
-    .social-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .social-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 1.75rem;
-      transition: all 0.3s;
-    }
-
-    .social-card:hover {
-      border-color: var(--border-accent);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-    }
-
-    .social-card-top {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .social-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--green), var(--purple));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .social-card-top-info strong {
-      display: block;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .social-card-top-info span {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-
-    .social-card-platform {
-      margin-left: auto;
-      font-size: 1.1rem;
-    }
-
-    .social-card p {
+    .service-card p {
       color: var(--text-muted);
       font-size: 0.9rem;
-      line-height: 1.65;
-      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      position: relative;
     }
 
-    .social-card p::before { content: '"'; color: var(--green); font-size: 1.2rem; font-style: normal; }
-    .social-card p::after  { content: '"'; color: var(--green); font-size: 1.2rem; font-style: normal; }
-
-    .social-follow {
+    .service-outcomes {
       display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 0.4rem;
+      position: relative;
     }
-
-    .follow-link {
+    .service-outcome {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1rem 1.5rem;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: all 0.25s;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .service-outcome i { color: var(--cyan); flex-shrink: 0; }
+
+    /* ═══════════════════════════════════════════
+       HOW IT WORKS
+    ═══════════════════════════════════════════ */
+    .how-it-works {
+      padding: var(--section-pad) 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(59,130,246,0.03) 50%, transparent 100%);
     }
 
-    .follow-link:hover {
-      border-color: var(--border-accent);
-      color: var(--green);
-      background: var(--green-glow);
-      transform: translateY(-2px);
-    }
-
-    .follow-link svg { width: 22px; height: 22px; }
-
-    /* ── FREE GUIDE CTA ── */
-    .guide-section {
-      padding: 6rem 0;
-      background: var(--bg);
-    }
-
-    .guide-inner {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 clamp(1.5rem, 5vw, 3rem);
-      text-align: center;
-    }
-
-    .guide-card {
-      background: linear-gradient(135deg, rgba(0,212,160,0.06) 0%, rgba(124,58,237,0.06) 100%);
-      border: 1px solid var(--border-accent);
-      border-radius: 24px;
-      padding: clamp(2.5rem, 6vw, 4rem);
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
       position: relative;
-      overflow: hidden;
     }
 
-    .guide-card::before {
+    /* Connector line between steps (desktop) */
+    .steps-grid::before {
       content: '';
       position: absolute;
-      top: -80px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 400px;
-      height: 400px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,212,160,0.1) 0%, transparent 70%);
+      top: 36px; left: 16%;
+      width: 68%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
       pointer-events: none;
     }
 
-    .guide-icon {
-      font-size: 3.5rem;
-      margin-bottom: 1.5rem;
-      display: block;
+    .step-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition: transform 0.25s, box-shadow 0.25s;
+      position: relative;
+    }
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(59,130,246,0.12);
     }
 
-    .guide-card .section-title {
-      margin-bottom: 1rem;
-    }
-
-    .guide-card .section-desc {
-      margin: 0 auto 2rem;
-    }
-
-    .guide-features {
+    .step-number {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--grad-hero);
+      color: #fff;
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 700;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
+      align-items: center;
       justify-content: center;
-      margin-bottom: 2.5rem;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 0 24px rgba(59,130,246,0.4);
     }
 
-    .guide-feature-pill {
-      background: rgba(0,212,160,0.08);
-      border: 1px solid rgba(0,212,160,0.15);
-      color: var(--green);
-      border-radius: 100px;
-      padding: 0.35rem 0.9rem;
-      font-size: 0.82rem;
-      font-weight: 600;
+    .step-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .step-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
     }
 
-    .btn-guide {
+    /* ═══════════════════════════════════════════
+       PRICING
+    ═══════════════════════════════════════════ */
+    .pricing {
+      padding: var(--section-pad) 0;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+      align-items: start;
+    }
+
+    /* Glassmorphism card */
+    .pricing-card {
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+    }
+
+    /* Featured card */
+    .pricing-card.featured {
+      background: linear-gradient(145deg, rgba(59,130,246,0.15) 0%, rgba(6,182,212,0.10) 100%);
+      border-color: rgba(59,130,246,0.4);
+      box-shadow: 0 0 0 1px rgba(59,130,246,0.2), 0 24px 60px rgba(59,130,246,0.12);
+    }
+    .pricing-card.featured:hover {
+      box-shadow: 0 0 0 1px rgba(59,130,246,0.3), 0 32px 72px rgba(59,130,246,0.2);
+    }
+
+    /* Inner glow for featured */
+    .pricing-card.featured::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%;
+      transform: translateX(-50%);
+      width: 280px; height: 160px;
+      background: radial-gradient(ellipse, rgba(59,130,246,0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .pricing-popular {
+      position: absolute;
+      top: 1.25rem; right: 1.25rem;
+      background: var(--grad-hero);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+    }
+
+    .pricing-tier-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 0.75rem;
+    }
+
+    .pricing-price-block {
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-trial {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      background: linear-gradient(135deg, var(--purple) 0%, #9d4edd 100%);
-      color: #fff;
-      padding: 1rem 2.5rem;
+      gap: 0.375rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--cyan);
+      background: rgba(6,182,212,0.1);
+      border: 1px solid rgba(6,182,212,0.25);
+      border-radius: 999px;
+      padding: 0.2rem 0.65rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-amount {
+      font-family: var(--font-head);
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      line-height: 1.1;
+    }
+    .pricing-amount span {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0;
+    }
+
+    .pricing-range-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+      line-height: 1.5;
+    }
+
+    .pricing-onboarding {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      background: rgba(59,130,246,0.07);
+      border: 1px solid rgba(59,130,246,0.15);
       border-radius: var(--radius);
-      font-weight: 700;
-      font-size: 1.05rem;
-      text-decoration: none;
-      transition: all 0.25s;
-      box-shadow: 0 0 30px var(--purple-glow);
+      padding: 0.625rem 0.875rem;
+      margin: 0.875rem 0 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .pricing-onboarding i { color: var(--blue); margin-top: 1px; flex-shrink: 0; }
+
+    .pricing-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 1.25rem 0;
     }
 
-    .btn-guide:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 40px rgba(124,58,237,0.5);
+    .pricing-desc {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
     }
 
-    /* ── ABOUT ZARA ── */
-    .about-section {
-      padding: 6rem 0;
-      background: var(--bg2);
+    .pricing-features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+    .pricing-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .pricing-feature i { color: var(--cyan); flex-shrink: 0; margin-top: 2px; }
+
+    .pricing-cta {
+      width: 100%;
+      justify-content: center;
+      padding: 0.8rem 1.5rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       ABOUT / CREDIBILITY
+    ═══════════════════════════════════════════ */
+    .about {
+      padding: var(--section-pad) 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(59,130,246,0.03) 50%, transparent 100%);
     }
 
     .about-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 4rem;
       align-items: center;
     }
 
-    .about-visual {
-      position: relative;
+    .about-content .badge { margin-bottom: 1.5rem; }
+
+    .about-content h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 1.125rem;
+      color: var(--text);
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+      font-size: 0.975rem;
+    }
+
+    .about-actions {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      gap: 0.875rem;
+      flex-wrap: wrap;
+      margin-top: 1.75rem;
     }
 
-    .about-avatar-ring {
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--green), var(--purple));
-      padding: 3px;
-      position: relative;
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
     }
 
-    .about-avatar-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: var(--bg3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 7rem;
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+    .stat-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(59,130,246,0.1);
+      border-color: var(--border-accent);
+    }
+
+    .stat-value {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      background: var(--grad-hero);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* ═══════════════════════════════════════════
+       CTA BANNER
+    ═══════════════════════════════════════════ */
+    .cta-section {
+      padding: var(--section-pad) 0;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, rgba(59,130,246,0.15) 0%, rgba(6,182,212,0.10) 100%);
+      border: 1px solid rgba(59,130,246,0.25);
+      border-radius: var(--radius-xl);
+      padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+      text-align: center;
       position: relative;
       overflow: hidden;
     }
 
-    .about-avatar-inner::after {
+    .cta-box::before {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 40%;
-      background: linear-gradient(to top, rgba(0,212,160,0.1), transparent);
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 500px; height: 250px;
+      background: radial-gradient(ellipse, rgba(59,130,246,0.2) 0%, transparent 70%);
+      pointer-events: none;
     }
 
-    .about-glow {
-      position: absolute;
-      inset: -30px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--green-glow-strong) 0%, transparent 70%);
-      filter: blur(20px);
-      z-index: -1;
-    }
-
-    .about-stats {
-      position: absolute;
-      bottom: -20px;
-      right: -20px;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .about-stat-chip {
-      background: var(--surface);
-      border: 1px solid var(--border-accent);
-      border-radius: 10px;
-      padding: 0.6rem 1rem;
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
-
-    .about-stat-chip strong {
-      display: block;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--green);
-    }
-
-    .about-stat-chip span {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .about-content h2 {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 1.25rem;
-    }
-
-    .about-content h2 .zap { color: var(--green); }
-
-    .about-content p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.8;
+    .cta-box h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 4vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
       margin-bottom: 1rem;
+      position: relative;
+      color: var(--text);
     }
-
-    .about-traits {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1.5rem;
-    }
-
-    .trait {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.35rem 0.85rem;
-      font-size: 0.82rem;
-      font-weight: 500;
+    .cta-box p {
       color: var(--text-muted);
-      transition: all 0.2s;
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      position: relative;
+      line-height: 1.7;
     }
 
-    .trait:hover {
-      border-color: var(--border-accent);
-      color: var(--green);
-      background: var(--green-glow);
-    }
-
-    /* ── EMAIL SIGNUP SECTION ── */
-    .signup-section {
-      padding: 6rem 0;
-      background: var(--bg);
-    }
-
-    .signup-inner {
-      max-width: 560px;
-      margin: 0 auto;
-      padding: 0 clamp(1.5rem, 5vw, 3rem);
-      text-align: center;
-    }
-
-    .signup-inner .section-title { margin-bottom: 0.75rem; }
-    .signup-inner .section-desc { margin: 0 auto 2rem; }
-
-    .signup-form {
+    .email-capture {
       display: flex;
       gap: 0.75rem;
+      max-width: 440px;
+      margin: 0 auto;
       flex-wrap: wrap;
       justify-content: center;
+      position: relative;
     }
 
-    .signup-form input {
+    .email-capture input {
       flex: 1;
       min-width: 220px;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      padding: 0.8rem 1.125rem;
       border-radius: var(--radius);
-      padding: 0.875rem 1.25rem;
-      font-size: 0.95rem;
+      border: 1px solid var(--border-accent);
+      background: rgba(255,255,255,0.06);
       color: var(--text);
       font-family: var(--font);
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .signup-form input::placeholder { color: var(--text-dim); }
-
-    .signup-form input:focus {
-      border-color: var(--border-accent);
-    }
-
-    .signup-form button {
-      background: var(--green);
-      color: #000;
-      border: none;
-      border-radius: var(--radius);
-      padding: 0.875rem 1.75rem;
       font-size: 0.95rem;
-      font-weight: 700;
-      font-family: var(--font);
-      cursor: pointer;
-      transition: all 0.2s;
-      white-space: nowrap;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .email-capture input::placeholder { color: var(--text-dim); }
+    .email-capture input:focus {
+      border-color: var(--blue);
+      background: rgba(59,130,246,0.08);
     }
 
-    .signup-form button:hover {
-      background: #00edb3;
-      transform: translateY(-1px);
-    }
-
-    .signup-note {
-      margin-top: 1rem;
+    .cta-note {
+      margin-top: 0.875rem;
       font-size: 0.8rem;
       color: var(--text-dim);
+      position: relative;
     }
 
-    /* ── FOOTER ── */
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
     footer {
-      background: var(--bg3);
       border-top: 1px solid var(--border);
-      padding: 3.5rem 0 2rem;
+      padding: 3rem 0 2rem;
     }
 
     .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 clamp(1.5rem, 5vw, 3rem);
-    }
-
-    .footer-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 3rem;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2.5rem;
     }
 
+    .footer-brand .nav-logo {
+      margin-bottom: 0.875rem;
+    }
     .footer-brand p {
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       line-height: 1.7;
-      margin: 0.75rem 0 1.25rem;
-      max-width: 280px;
+      max-width: 220px;
     }
 
-    .footer-social-links {
+    .footer-social {
       display: flex;
-      gap: 0.75rem;
+      gap: 0.625rem;
+      margin-top: 1.25rem;
     }
-
-    .footer-social-link {
-      width: 36px;
-      height: 36px;
+    .footer-social a {
+      width: 36px; height: 36px;
       border-radius: 8px;
       background: var(--surface);
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
-      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
       transition: all 0.2s;
     }
-
-    .footer-social-link:hover {
+    .footer-social a:hover {
+      background: rgba(59,130,246,0.12);
       border-color: var(--border-accent);
-      background: var(--green-glow);
+      color: var(--blue);
+      transform: translateY(-2px);
     }
 
     .footer-col h4 {
-      font-family: var(--font-heading);
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--text-muted);
+      color: var(--text-dim);
       margin-bottom: 1rem;
     }
-
-    .footer-col ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .footer-col ul a {
+    .footer-col ul { display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-col a {
       color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       transition: color 0.2s;
     }
-
-    .footer-col ul a:hover { color: var(--green); }
+    .footer-col a:hover { color: var(--text); }
 
     .footer-bottom {
-      border-top: 1px solid var(--border);
+      margin-top: 2.5rem;
       padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.75rem;
     }
-
     .footer-bottom p {
+      font-size: 0.8rem;
       color: var(--text-dim);
-      font-size: 0.82rem;
     }
+    .footer-bottom a { color: var(--text-muted); transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--blue); }
 
-    .footer-bottom-links {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-bottom-links a {
-      color: var(--text-dim);
-      text-decoration: none;
-      font-size: 0.82rem;
-      transition: color 0.2s;
-    }
-
-    .footer-bottom-links a:hover { color: var(--green); }
-
-    /* ── DIVIDER ── */
-    .divider {
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--border-accent), transparent);
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    /* ── RESPONSIVE ── */
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════ */
     @media (max-width: 900px) {
-      .about-inner {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-
-      .about-visual {
-        order: -1;
-      }
-
-      .about-avatar-ring {
-        width: 260px;
-        height: 260px;
-      }
-
-      .about-stats {
-        right: 0;
-        bottom: -10px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-      }
-
-      .footer-brand {
-        grid-column: 1 / -1;
-      }
-    }
-
-    @media (max-width: 640px) {
       .nav-links { display: none; }
-      .nav-links.open {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 68px;
-        left: 0;
-        right: 0;
-        background: rgba(13,13,15,0.97);
-        padding: 1.5rem;
-        gap: 1.25rem;
-        border-bottom: 1px solid var(--border);
-        z-index: 99;
-      }
       .hamburger { display: flex; }
-
-      .hero { padding-top: 6rem; }
-
-      .hero h1 { font-size: 2.4rem; }
-
-      .cards-grid { grid-template-columns: 1fr; }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .footer-brand { grid-column: 1; }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .social-cards { grid-template-columns: 1fr; }
+      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .steps-grid::before { display: none; }
     }
 
-    /* ── PRODUCTS / SHOP ── */
-    .products-section {
-      padding: 6rem 0;
-      background: var(--bg);
+    @media (max-width: 600px) {
+      .proof-divider { display: none; }
+      .proof-bar-inner { gap: 1rem; justify-content: flex-start; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
     }
 
-    .products-header {
-      text-align: center;
-      margin-bottom: 4rem;
+    /* ═══════════════════════════════════════════
+       TEAM SECTION
+    ═══════════════════════════════════════════ */
+    .team {
+      padding: var(--section-pad) 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(6,182,212,0.03) 50%, transparent 100%);
     }
 
-    .products-header .section-desc { margin: 0 auto; }
-
-    .products-grid {
+    .team-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.75rem;
+      gap: 2rem;
+      margin-top: 3.5rem;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .product-card {
+    .team-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 2.25rem;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s;
-      position: relative;
+      border-radius: var(--radius-xl);
+      padding: 2.25rem 2rem;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(59,130,246,0.12);
+      border-color: var(--border-accent);
+    }
+
+    .team-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 1.25rem;
       overflow: hidden;
+      border: 3px solid var(--border-accent);
+      box-shadow: 0 0 28px rgba(59,130,246,0.2);
+      object-fit: cover;
+      display: block;
     }
 
-    .product-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, var(--green-glow) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      border-radius: inherit;
-    }
-
-    .product-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-5px);
-      box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 30px var(--green-glow);
-    }
-
-    .product-card:hover::before { opacity: 1; }
-
-    .product-card.featured {
-      border-color: var(--border-accent);
-      background: linear-gradient(135deg, rgba(0,212,160,0.06) 0%, rgba(124,58,237,0.04) 100%);
-    }
-
-    .product-badge {
-      display: inline-flex;
+    .team-avatar-zara {
+      background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(6,182,212,0.15));
+      display: flex;
       align-items: center;
-      gap: 0.4rem;
-      border-radius: 100px;
-      padding: 0.3rem 0.85rem;
-      font-size: 0.75rem;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .team-name {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
       font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+    .team-title {
+      font-size: 0.82rem;
+      font-weight: 600;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      margin-bottom: 1.25rem;
-      position: relative;
-      z-index: 1;
-      width: fit-content;
-    }
-
-    .product-badge.free {
-      background: rgba(0,212,160,0.12);
-      border: 1px solid rgba(0,212,160,0.3);
-      color: var(--green);
-    }
-
-    .product-badge.paid {
-      background: rgba(124,58,237,0.12);
-      border: 1px solid rgba(124,58,237,0.3);
-      color: #a78bfa;
-    }
-
-    .product-icon {
-      font-size: 2.75rem;
-      margin-bottom: 1rem;
-      display: block;
-      position: relative;
-      z-index: 1;
-    }
-
-    .product-card h3 {
-      font-family: var(--font-heading);
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-      color: var(--text);
-      position: relative;
-      z-index: 1;
-    }
-
-    .product-price {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--green);
-      font-family: var(--font-heading);
-      margin-bottom: 0.75rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .product-price .price-sub {
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--text-muted);
-      font-family: var(--font);
-    }
-
-    .product-card > p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-      flex: 1;
-      position: relative;
-      z-index: 1;
-    }
-
-    .product-features {
-      list-style: none;
-      margin-bottom: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .product-features li {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .product-features li::before {
-      content: '✓';
-      color: var(--green);
-      font-weight: 700;
-      font-size: 0.8rem;
-      flex-shrink: 0;
-    }
-
-    .btn-product-free {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      background: var(--green);
-      color: #000;
-      padding: 0.85rem 1.5rem;
-      border-radius: var(--radius);
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 0 20px var(--green-glow-strong);
-      position: relative;
-      z-index: 1;
-    }
-
-    .btn-product-free:hover {
-      background: #00edb3;
-      transform: translateY(-2px);
-    }
-
-    .btn-product-paid {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      background: linear-gradient(135deg, var(--purple) 0%, #9d4edd 100%);
-      color: #fff;
-      padding: 0.85rem 1.5rem;
-      border-radius: var(--radius);
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 0 20px var(--purple-glow);
-      position: relative;
-      z-index: 1;
-    }
-
-    .btn-product-paid:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(124,58,237,0.5);
-    }
-
-    /* ── WORK WITH JAX / CONSULTING ── */
-    .consulting-section {
-      padding: 6rem 0;
-      background: var(--bg2);
-    }
-
-    .consulting-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .consulting-content .section-title { margin-bottom: 1rem; }
-
-    .consulting-content p {
-      color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.8;
+      color: var(--blue);
       margin-bottom: 1rem;
     }
-
-    .consulting-details {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .consulting-detail-item {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 0.85rem 1.25rem;
-      font-size: 0.92rem;
+    .team-bio {
       color: var(--text-muted);
+      font-size: 0.875rem;
+      line-height: 1.75;
     }
-
-    .consulting-detail-item .detail-icon {
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
-    .consulting-detail-item strong { color: var(--text); }
-
-    .consulting-coming-soon {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: rgba(0,212,160,0.06);
-      border: 1px solid var(--border-accent);
-      border-radius: 8px;
-      padding: 0.6rem 1rem;
-      font-size: 0.82rem;
-      color: var(--green);
-      font-weight: 600;
-    }
-
-    .consulting-form-card {
-      background: var(--surface);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem;
-    }
-
-    .consulting-form-card h3 {
-      font-family: var(--font-heading);
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--text);
-    }
-
-    .consulting-form-card .form-sub {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      margin-bottom: 1.75rem;
-      line-height: 1.6;
-    }
-
-    .consult-form {
+    .team-tags {
       display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .form-field {
-      display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 0.4rem;
+      justify-content: center;
+      margin-top: 1.25rem;
     }
-
-    .form-field label {
-      font-size: 0.82rem;
+    .team-tag {
+      font-size: 0.72rem;
       font-weight: 600;
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(59,130,246,0.1);
+      border: 1px solid rgba(59,130,246,0.2);
       color: var(--text-muted);
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
     }
 
-    .form-field input,
-    .form-field textarea,
-    .form-field select {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 0.8rem 1.1rem;
-      font-size: 0.92rem;
-      color: var(--text);
-      font-family: var(--font);
-      outline: none;
-      transition: border-color 0.2s;
-      resize: none;
-      width: 100%;
+    /* ═══════════════════════════════════════════
+       BLOG SECTION
+    ═══════════════════════════════════════════ */
+    .blog {
+      padding: var(--section-pad) 0;
     }
-
-    .form-field input::placeholder,
-    .form-field textarea::placeholder { color: var(--text-dim); }
-
-    .form-field input:focus,
-    .form-field textarea:focus,
-    .form-field select:focus {
-      border-color: var(--border-accent);
-    }
-
-    .form-field select option { background: var(--bg); }
-
-    .btn-consult {
-      background: var(--green);
-      color: #000;
-      border: none;
-      border-radius: var(--radius);
-      padding: 0.9rem 1.75rem;
-      font-size: 0.95rem;
-      font-weight: 700;
-      font-family: var(--font);
-      cursor: pointer;
-      transition: all 0.2s;
-      box-shadow: 0 0 20px var(--green-glow-strong);
-      width: 100%;
-    }
-
-    .btn-consult:hover {
-      background: #00edb3;
-      transform: translateY(-1px);
-    }
-
-    .form-note {
-      font-size: 0.78rem;
-      color: var(--text-dim);
-      text-align: center;
-      margin-top: 0.25rem;
-    }
-
-    @media (max-width: 900px) {
-      .consulting-inner {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .products-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ── ANIMATIONS ── */
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-12px); }
-    }
-
-    .float { animation: float 6s ease-in-out infinite; }
-
-    @keyframes shimmer {
-      0% { background-position: -200% center; }
-      100% { background-position: 200% center; }
-    }
-
-    .shimmer-text {
-      background: linear-gradient(90deg, var(--green) 0%, #fff 40%, var(--green) 60%, var(--purple) 100%);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: shimmer 4s linear infinite;
-    }
-  
-    /* ── BLOG GRID ── */
-    .blog-section {
-      padding: 6rem 0;
-      background: var(--bg2);
-    }
-
-    .blog-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-
-    .blog-header .section-desc { margin: 0 auto; }
 
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.75rem;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
     }
 
     .blog-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 1.75rem;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.3s;
-      text-decoration: none;
-      color: inherit;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     }
-
     .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(59,130,246,0.12);
       border-color: var(--border-accent);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px var(--green-glow);
     }
 
-    .blog-card-tag {
-      display: inline-flex;
+    .blog-card-header {
+      height: 160px;
+      display: flex;
       align-items: center;
-      gap: 0.35rem;
-      background: rgba(0,212,160,0.08);
-      border: 1px solid rgba(0,212,160,0.15);
-      color: var(--green);
-      border-radius: 100px;
-      padding: 0.25rem 0.75rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-      width: fit-content;
+      justify-content: center;
+      font-size: 3rem;
+      position: relative;
+      overflow: hidden;
     }
+    .blog-card-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.12;
+    }
+    .blog-card-header.h1::before { background: linear-gradient(135deg, #3B82F6, #06B6D4); }
+    .blog-card-header.h2::before { background: linear-gradient(135deg, #8B5CF6, #3B82F6); }
+    .blog-card-header.h3::before { background: linear-gradient(135deg, #06B6D4, #10B981); }
 
-    .blog-card h3 {
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
+    .blog-card-body {
+      padding: 1.5rem;
+    }
+    .blog-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.775rem;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
+    }
+    .blog-card-tag {
+      background: rgba(59,130,246,0.1);
+      color: var(--blue);
+      border: 1px solid rgba(59,130,246,0.2);
+      border-radius: 999px;
+      padding: 0.15rem 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .blog-card-title {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 0.6rem;
-      line-height: 1.4;
+      line-height: 1.35;
+      margin-bottom: 0.625rem;
     }
-
-    .blog-card p {
+    .blog-card-excerpt {
       color: var(--text-muted);
-      font-size: 0.88rem;
-      line-height: 1.65;
-      flex: 1;
+      font-size: 0.85rem;
+      line-height: 1.7;
       margin-bottom: 1.25rem;
     }
-
     .blog-card-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      color: var(--green);
+      gap: 0.35rem;
       font-size: 0.85rem;
       font-weight: 600;
-      text-decoration: none;
-      margin-top: auto;
+      color: var(--blue);
       transition: gap 0.2s;
     }
+    .blog-card-link:hover { gap: 0.55rem; }
 
-    .blog-card:hover .blog-card-link {
-      gap: 0.65rem;
+    /* ═══════════════════════════════════════════
+       CONTACT SECTION
+    ═══════════════════════════════════════════ */
+    .contact-section {
+      padding: var(--section-pad) 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(59,130,246,0.03) 50%, transparent 100%);
     }
 
-    @media (max-width: 640px) {
-      .blog-grid { grid-template-columns: 1fr; }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: start;
     }
+
+    .contact-info .badge { margin-bottom: 1.5rem; }
+    .contact-info h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .contact-info p {
+      color: var(--text-muted);
+      font-size: 0.975rem;
+      line-height: 1.75;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 0.75rem;
+      transition: border-color 0.2s;
+    }
+    .contact-detail:hover { border-color: var(--border-accent); }
+    .contact-detail i { color: var(--blue); flex-shrink: 0; }
+    .contact-detail a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.2s; }
+    .contact-detail a:hover { color: var(--text); }
+
+    .contact-form {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.125rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 0.45rem;
+      letter-spacing: 0.03em;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-accent);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      resize: vertical;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--blue);
+      background: rgba(59,130,246,0.06);
+    }
+    .form-group textarea { min-height: 120px; }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--text-dim); }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-submit {
+      width: 100%;
+      justify-content: center;
+      margin-top: 0.5rem;
+      padding: 0.875rem;
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-top: 0.75rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    /* ═══════════════════════════════════════════
+       SCROLL ANIMATIONS
+    ═══════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "TheZaraAI",
-    "url": "https://thezaraai.com",
-    "description": "AI agent training and education platform. Learn to build personal AI agents with free and premium resources.",
-    "founder": {
-      "@type": "Person",
-      "name": "Jax Scott",
-      "jobTitle": "AI Educator & Cybersecurity Expert"
-    },
-    "sameAs": [
-      "https://x.com/the_ZaraAI",
-      "https://instagram.com/the_Zaraai",
-      "https://thezaraai.gumroad.com"
-    ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "AI Agent Starter Kit",
-        "price": "27.00",
-        "priceCurrency": "USD",
-        "url": "https://thezaraai.gumroad.com/l/yphml"
-      },
-      {
-        "@type": "Offer",
-        "name": "Cybersecurity AI Prompt Pack",
-        "price": "47.00",
-        "priceCurrency": "USD",
-        "url": "https://thezaraai.gumroad.com/l/qstadl"
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">
-      <span class="zap">⚡</span> ZaraAI
-    </a>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#shop">Shop</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#consulting">Work With Jax</a></li>
-      <li><a href="#guide">Free Guide</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="blog/">Blog</a></li>
-      <li><a href="https://thezaraai.beehiiv.com/subscribe" target="_blank" rel="noopener" class="nav-cta">Join Free ⚡</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+  <!-- ════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">ZaraAI <em class="zap">⚡</em></a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#team">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="hero-orb-1"></div>
-      <div class="hero-orb-2"></div>
-      <div class="hero-orb-3"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span>⚡</span> AI Education for Everyone
-      </div>
-      <h1>
-        Your Personal AI Agent.<br/>
-        <span class="highlight">Your Rules.</span>
-      </h1>
-      <p class="hero-sub">
-        Meet Zara — the intelligent AI agent redefining what's possible. No fluff. No gatekeeping. Just real AI power in your hands.
-      </p>
-      <div class="hero-actions">
-        <a href="#shop" class="btn-primary">
-          🛒 Shop the Products
-        </a>
-        <a href="#guide" class="btn-secondary">
-          📖 Get the Free Guide
-        </a>
-      </div>
-      <div class="hero-social-proof">
-        <div class="hero-social-proof-item">
-          <span class="dot"></span>
-          AI-powered education
-        </div>
-        <div class="hero-social-proof-item">
-          <span class="dot"></span>
-          Real tools. Real results.
-        </div>
-        <div class="hero-social-proof-item">
-          <span class="dot"></span>
-          Community-driven
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation">
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#pricing" class="mobile-link">Pricing</a>
+    <a href="#how-it-works" class="mobile-link">How It Works</a>
+    <a href="#team" class="mobile-link">About</a>
+    <a href="#blog" class="mobile-link">Blog</a>
+    <a href="#contact" class="btn btn-primary mobile-link">Book a Call</a>
+  </div>
 
-  <!-- WHAT IS ZARAAI -->
-  <section class="what-section" id="what">
-    <div class="section-inner">
-      <div class="what-header">
-        <div class="section-label">What is ZaraAI</div>
-        <h2 class="section-title">AI that works <em>for</em> you,<br/>not the other way around</h2>
-        <p class="section-desc">
-          ZaraAI is your gateway into the world of personal AI agents — no PhD required. We teach, guide, and build alongside you.
+  <main>
+
+    <!-- ════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-orb-left"></div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="badge">
+            <i data-lucide="zap" width="12" height="12"></i>
+            AI Automation Consulting
+          </span>
+        </div>
+
+        <h1>
+          Stop Doing Manually<br>
+          <span class="gradient-text">What AI Can Do For You</span>
+        </h1>
+
+        <p class="hero-sub">
+          ZaraAI helps businesses automate operations, eliminate busywork, and integrate AI into every layer of how you work — built by a cybersecurity veteran who has spent a decade optimizing systems under pressure.
         </p>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-icon">🧠</div>
-          <h3>Learn Without the Fluff</h3>
-          <p>Plain-English breakdowns of AI concepts, tools, and techniques. From zero to building your first AI agent — we walk you through every step.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">⚡</div>
-          <h3>Real Power. Real Fast.</h3>
-          <p>Hands-on guides built around actual tools like OpenClaw, Claude, and more. No toy projects — real workflows that change how you work.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">🌐</div>
-          <h3>Community First</h3>
-          <p>Join a growing community of builders, learners, and dreamers. Share what you build, learn from others, and grow together in the AI revolution.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <div class="divider"></div>
-
-  <!-- SOCIAL PROOF -->
-  <section class="social-section" id="community">
-    <div class="section-inner">
-      <div class="social-header">
-        <div class="section-label">Community</div>
-        <h2 class="section-title">Join the conversation ⚡</h2>
-        <p class="section-desc">
-          Real people. Real results. The ZaraAI community is growing fast — and we'd love to have you in it.
-        </p>
-      </div>
-      <div class="social-cards">
-        <div class="social-card">
-          <div class="social-card-top">
-            <div class="social-avatar">🤖</div>
-            <div class="social-card-top-info">
-              <strong>@the_ZaraAI</strong>
-              <span>on X (Twitter)</span>
-            </div>
-            <div class="social-card-platform">𝕏</div>
-          </div>
-          <p>Finally set up my own personal AI agent following the ZaraAI guide. This changes everything. The future is now and it's wild.</p>
-        </div>
-        <div class="social-card">
-          <div class="social-card-top">
-            <div class="social-avatar">✨</div>
-            <div class="social-card-top-info">
-              <strong>@the_ZaraAI</strong>
-              <span>on Instagram</span>
-            </div>
-            <div class="social-card-platform">📸</div>
-          </div>
-          <p>ZaraAI's beginner guide is the most clear, no-nonsense intro to AI agents I've found. Actually understood it on the first read.</p>
-        </div>
-        <div class="social-card">
-          <div class="social-card-top">
-            <div class="social-avatar">🚀</div>
-            <div class="social-card-top-info">
-              <strong>ZaraAI Community</strong>
-              <span>Newsletter</span>
-            </div>
-            <div class="social-card-platform">📧</div>
-          </div>
-          <p>This newsletter is a must. Every edition teaches me something new about AI I can actually apply the same day. Subscribed and never leaving.</p>
-        </div>
-      </div>
-      <div class="social-follow">
-        <a href="https://x.com/the_ZaraAI" target="_blank" rel="noopener" class="follow-link">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-          Follow @the_ZaraAI
-        </a>
-        <a href="https://instagram.com/the_Zaraai" target="_blank" rel="noopener" class="follow-link">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <circle cx="12" cy="12" r="4.5"/>
-            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
-          </svg>
-          Follow on Instagram
-        </a>
-        <a href="https://thezaraai.beehiiv.com/subscribe" target="_blank" rel="noopener" class="follow-link">
-          <span>📧</span>
-          Subscribe to Newsletter
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- FREE GUIDE CTA -->
-  <section class="guide-section" id="guide">
-    <div class="guide-inner">
-      <div class="guide-card">
-        <span class="guide-icon float">📖</span>
-        <div class="section-label" style="justify-content:center">Free Resource</div>
-        <h2 class="section-title">The OpenClaw Beginner's Guide</h2>
-        <p class="section-desc">
-          Your complete introduction to AI agents — what they are, how they work, and how to set up your first one. Written by Zara. Built for humans.
-        </p>
-        <div class="guide-features">
-          <span class="guide-feature-pill">✅ Step-by-step setup</span>
-          <span class="guide-feature-pill">✅ Plain English</span>
-          <span class="guide-feature-pill">✅ Real tools covered</span>
-          <span class="guide-feature-pill">✅ 100% Free</span>
-          <span class="guide-feature-pill">✅ No experience needed</span>
-        </div>
-        <a href="https://github.com/jayopenclaw33/OpenClaw-Beginner-Guide-" target="_blank" rel="noopener" class="btn-guide">
-          📖 Get the Free Guide
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- PRODUCTS / SHOP -->
-  <section class="products-section" id="shop">
-    <div class="section-inner">
-      <div class="products-header">
-        <div class="section-label">Shop</div>
-        <h2 class="section-title">Level up your AI game ⚡</h2>
-        <p class="section-desc">
-          Tools, templates, and resources built by Jax — tested in the real world, ready for yours.
-        </p>
-      </div>
-      <div class="products-grid">
-
-        <!-- FREE GUIDE -->
-        <div class="product-card featured">
-          <span class="product-badge free">✅ Free</span>
-          <span class="product-icon">📖</span>
-          <h3>OpenClaw Beginner's Guide</h3>
-          <div class="product-price">$0 <span class="price-sub">— always free</span></div>
-          <p>Your complete introduction to AI agents. What they are, how they work, and how to set up your first one. Written by Zara. Built for humans.</p>
-          <ul class="product-features">
-            <li>10 full chapters + intro & conclusion</li>
-            <li>Step-by-step setup walkthrough</li>
-            <li>Plain English — no CS degree needed</li>
-            <li>Covers OpenClaw, Claude & real tools</li>
-            <li>100% free, no email required</li>
-          </ul>
-          <a href="https://github.com/jayopenclaw33/OpenClaw-Beginner-Guide-" target="_blank" rel="noopener" class="btn-product-free">
-            📖 Download Free Guide
+        <div class="hero-actions">
+          <a href="https://thezaraai.gumroad.com/l/qstadl" target="_blank" rel="noopener" class="btn btn-primary">
+            <i data-lucide="rocket" width="16" height="16"></i>
+            Start Free Trial
+          </a>
+          <a href="#how-it-works" class="btn btn-outline">
+            <i data-lucide="play-circle" width="16" height="16"></i>
+            See How It Works
           </a>
         </div>
+      </div>
 
-        <!-- AI AGENT STARTER KIT -->
-        <div class="product-card">
-          <span class="product-badge paid">⚡ Digital Product</span>
-          <span class="product-icon">🤖</span>
-          <h3>AI Agent Starter Kit</h3>
-          <div class="product-price">$27</div>
-          <p>Everything you need to deploy your own personal AI agent — right out of the box. Templates, configs, and Jax's exact setup files.</p>
-          <ul class="product-features">
-            <li>Pre-built SOUL.md + AGENTS.md templates</li>
-            <li>OpenClaw config starter files</li>
-            <li>Real-world workflow examples</li>
-            <li>Memory + identity setup guides</li>
-            <li>Instant download via Gumroad</li>
-          </ul>
-          <a href="https://thezaraai.gumroad.com/l/yphml" target="_blank" rel="noopener" class="btn-product-paid">
-            🛒 Buy for $27
-          </a>
+      <div class="hero-scroll-hint">
+        <i data-lucide="chevrons-down" width="16" height="16"></i>
+        Scroll
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         SOCIAL PROOF BAR
+    ════════════════════════════════════════ -->
+    <div class="proof-bar">
+      <div class="container">
+        <div class="proof-bar-inner">
+          <div class="proof-item">
+            <i data-lucide="mic" width="16" height="16"></i>
+            RSA Conference Speaker
+          </div>
+          <div class="proof-divider"></div>
+          <div class="proof-item">
+            <i data-lucide="shield" width="16" height="16"></i>
+            U.S. Army Special Forces Veteran
+          </div>
+          <div class="proof-divider"></div>
+          <div class="proof-item">
+            <i data-lucide="lock" width="16" height="16"></i>
+            Cybersecurity Expert · 10+ Years
+          </div>
+          <div class="proof-divider"></div>
+          <div class="proof-item">
+            <i data-lucide="cpu" width="16" height="16"></i>
+            100+ Automations Built
+          </div>
         </div>
-
-        <!-- CYBERSECURITY PROMPT PACK -->
-        <div class="product-card">
-          <span class="product-badge paid">🔐 Digital Product</span>
-          <span class="product-icon">🛡️</span>
-          <h3>Cybersecurity AI Prompt Pack</h3>
-          <div class="product-price">$47</div>
-          <p>50+ battle-tested AI prompts for cybersecurity professionals. Built from 19 years of real-world experience — not theory.</p>
-          <ul class="product-features">
-            <li>50+ prompts across threat intel, incident response, red team & more</li>
-            <li>Written by a 10-year Special Forces Cyber WO</li>
-            <li>Works with ChatGPT, Claude & all major LLMs</li>
-            <li>Organized by use case</li>
-            <li>Instant download via Gumroad</li>
-          </ul>
-          <a href="https://thezaraai.gumroad.com/l/qstadl" target="_blank" rel="noopener" class="btn-product-paid">
-            🛒 Buy for $47
-          </a>
-        </div>
-
       </div>
     </div>
-  </section>
 
-  <div class="divider"></div>
+    <!-- ════════════════════════════════════════
+         SERVICES
+    ════════════════════════════════════════ -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="badge">
+            <i data-lucide="layers" width="12" height="12"></i>
+            What We Do
+          </span>
+        </div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Intelligence Built Into<br><span class="gradient-text">Every Corner of Your Business</span>
+        </h2>
+        <p class="section-sub reveal reveal-delay-2">
+          From document automation to enterprise-grade AI security — ZaraAI builds systems that work while you sleep.
+        </p>
 
-  <!-- WORK WITH JAX / CONSULTING -->
-  <section class="consulting-section" id="consulting">
-    <div class="section-inner">
-      <div class="consulting-inner">
-        <div class="consulting-content">
-          <div class="section-label">Work With Jax</div>
-          <h2 class="section-title">Want to talk to a<br/>real human? ⚡</h2>
-          <p>
-            Need help understanding AI and how to leverage these tools in your daily life — and want to talk to a live person? Reach out to Jax directly.
-          </p>
-          <p>
-            Jax Scott is a 19-year cybersecurity veteran and AI educator who's been deploying real AI agents before most people knew they existed. She cuts through the noise and tells you exactly what you need.
-          </p>
-          <p>
-            Book a 15-minute strategy call and walk away with a clear picture of what AI can do for <em>you</em>.
-          </p>
-          <div class="consulting-details">
-            <div class="consulting-detail-item">
-              <span class="detail-icon">⏱️</span>
-              <div><strong>15-minute strategy call</strong> — focused, fast, and worth every second</div>
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card reveal">
+            <div class="service-icon">
+              <i data-lucide="bot" width="24" height="24"></i>
             </div>
-            <div class="consulting-detail-item">
-              <span class="detail-icon">📅</span>
-              <div><strong>Available:</strong> Tuesdays &amp; Thursdays at 4:30 PM ET</div>
-            </div>
-            <div class="consulting-detail-item">
-              <span class="detail-icon">🎯</span>
-              <div><strong>Topics:</strong> AI agents, cybersecurity + AI, daily workflow automation, OpenClaw setup</div>
+            <h3>AI Automation</h3>
+            <p>We map your workflows and replace repetitive manual tasks with intelligent automation — from document generation to email triage to project management creation.</p>
+            <div class="service-outcomes">
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Document & report automation
+              </div>
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Email filtering & smart routing
+              </div>
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Automated PM & task creation
+              </div>
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Hours saved every single week
+              </div>
             </div>
           </div>
-          <div class="consulting-coming-soon">
-            🗓️ Online booking coming soon — email below to reserve your spot
+
+          <!-- Card 2 -->
+          <div class="service-card reveal reveal-delay-1">
+            <div class="service-icon">
+              <i data-lucide="user-check" width="24" height="24"></i>
+            </div>
+            <h3>Virtual CISO (vCISO)</h3>
+            <p>Fractional cybersecurity leadership from a 10-year Army Special Forces cyber veteran. Get strategic security guidance without the full-time executive price tag.</p>
+            <div class="service-outcomes">
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Security strategy & risk advisory
+              </div>
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Policy & compliance frameworks
+              </div>
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Incident response planning
+              </div>
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Executive-level security briefings
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card reveal reveal-delay-2">
+            <div class="service-icon">
+              <i data-lucide="shield-check" width="24" height="24"></i>
+            </div>
+            <h3>AI Security</h3>
+            <p>AI introduces new attack surfaces. We audit your AI integrations, secure your data pipelines, and ensure your automation stack doesn't become a liability.</p>
+            <div class="service-outcomes">
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                AI integration security audits
+              </div>
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Prompt injection & data leak prevention
+              </div>
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Secure AI architecture design
+              </div>
+              <div class="service-outcome">
+                <i data-lucide="check" width="14" height="14"></i>
+                Ongoing monitoring & threat intel
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="consulting-form-card">
-          <h3>Request a Call with Jax</h3>
-          <p class="form-sub">Fill out the form and someone will reach out within 24 hours to confirm your 15-minute slot on Tuesdays or Thursdays at 4:30 PM ET.</p>
-          <form class="consult-form" onsubmit="handleConsultForm(event)">
-            <div class="form-field">
-              <label>Your Name</label>
-              <input type="text" placeholder="Jane Smith" required />
+    <!-- ════════════════════════════════════════
+         HOW IT WORKS
+    ════════════════════════════════════════ -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="badge">
+            <i data-lucide="map" width="12" height="12"></i>
+            The Process
+          </span>
+        </div>
+        <h2 class="section-title reveal reveal-delay-1">Three Steps to a<br><span class="gradient-text">Smarter Operation</span></h2>
+        <p class="section-sub reveal reveal-delay-2">We don't throw tools at problems. We understand your business first, then build exactly what you need.</p>
+
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-number">1</div>
+            <h3>Assess</h3>
+            <p>We audit your current workflows, identify high-impact automation opportunities, and scope a custom plan built around your actual needs — not a template.</p>
+          </div>
+          <div class="step-card reveal reveal-delay-1">
+            <div class="step-number">2</div>
+            <h3>Automate</h3>
+            <p>We build and deploy your automation stack — AI agents, workflow tools, integrations — and make sure everything actually works before you pay full price.</p>
+          </div>
+          <div class="step-card reveal reveal-delay-2">
+            <div class="step-number">3</div>
+            <h3>Optimize</h3>
+            <p>Ongoing support, iteration, and expansion. As your business grows, your automation grows with it. We're in your corner for the long game.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         PRICING
+    ════════════════════════════════════════ -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="badge">
+            <i data-lucide="tag" width="12" height="12"></i>
+            Pricing
+          </span>
+        </div>
+        <h2 class="section-title reveal reveal-delay-1">Transparent Pricing.<br><span class="gradient-text">Real Results.</span></h2>
+        <p class="section-sub reveal reveal-delay-2">Start free. Scale when you're ready. Every tier is designed to pay for itself.</p>
+
+        <div class="pricing-grid">
+
+          <!-- Tier 1: Starter -->
+          <div class="pricing-card reveal">
+            <div class="pricing-tier-name">Starter</div>
+
+            <div class="pricing-price-block">
+              <div class="pricing-trial">
+                <i data-lucide="gift" width="12" height="12"></i>
+                10-Day Free Trial
+              </div>
+              <div class="pricing-amount">$40<span>/mo</span></div>
+              <div class="pricing-range-note">After your free trial — cancel anytime.</div>
             </div>
-            <div class="form-field">
-              <label>Email Address</label>
-              <input type="email" placeholder="jane@company.com" required />
+
+            <div class="pricing-divider"></div>
+
+            <p class="pricing-desc">Perfect for solopreneurs and small teams ready to eliminate their most painful manual tasks and reclaim their time.</p>
+
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Automated document generation
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Intelligent email filtering & routing
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Automated project & task creation
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Onboarding support & setup guide
+              </div>
             </div>
-            <div class="form-field">
-              <label>What do you want to talk about?</label>
-              <select required>
-                <option value="" disabled selected>Select a topic...</option>
-                <option value="ai-agents">Setting up my own AI agent</option>
-                <option value="cybersecurity-ai">AI in cybersecurity</option>
-                <option value="daily-workflow">AI for daily workflow automation</option>
-                <option value="openclaw">OpenClaw setup &amp; configuration</option>
-                <option value="business-ai">AI for my business</option>
-                <option value="other">Something else</option>
-              </select>
+
+            <a href="https://thezaraai.gumroad.com/l/qstadl" target="_blank" rel="noopener" class="btn btn-outline pricing-cta">
+              <i data-lucide="shopping-cart" width="15" height="15"></i>
+              Start Free Trial
+            </a>
+          </div>
+
+          <!-- Tier 2: Growth (Featured) -->
+          <div class="pricing-card featured reveal reveal-delay-1">
+            <div class="pricing-popular">Most Popular</div>
+            <div class="pricing-tier-name">Growth</div>
+
+            <div class="pricing-price-block">
+              <div class="pricing-amount">$80<span>–$125<small style="font-size:0.8rem">/mo</small></span></div>
+              <div class="pricing-range-note">Monthly support after onboarding. Rate scoped to your needs.</div>
             </div>
-            <div class="form-field">
-              <label>Tell me more (optional)</label>
-              <textarea rows="3" placeholder="A quick sentence or two about your situation — so Jax can come prepared."></textarea>
+
+            <div class="pricing-onboarding">
+              <i data-lucide="info" width="13" height="13"></i>
+              <span>One-time onboarding fee determined after a free scoping call — <strong>waivable</strong> based on your situation.</span>
             </div>
-            <button type="submit" class="btn-consult">📩 Request My Call</button>
-            <p class="form-note">No spam. Your info is only used to schedule your call.</p>
+
+            <div class="pricing-divider"></div>
+
+            <p class="pricing-desc">For growing teams that need real operational leverage — streamlined processes, intelligent workflows, and the systems to scale without hiring.</p>
+
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Process streamlining & documentation
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Custom workflow automation builds
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Operational efficiency consulting
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Monthly check-ins & iteration
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Everything in Starter
+              </div>
+            </div>
+
+            <a href="mailto:info@thezaraai.com?subject=Growth%20Plan%20Inquiry" class="btn btn-primary pricing-cta">
+              <i data-lucide="calendar" width="15" height="15"></i>
+              Book a Scoping Call
+            </a>
+          </div>
+
+          <!-- Tier 3: Scale -->
+          <div class="pricing-card reveal reveal-delay-2">
+            <div class="pricing-tier-name">Scale</div>
+
+            <div class="pricing-price-block">
+              <div class="pricing-amount">$250<span>–$997<small style="font-size:0.8rem">/mo</small></span></div>
+              <div class="pricing-range-note">Monthly support after onboarding. Scoped to complexity and scope.</div>
+            </div>
+
+            <div class="pricing-onboarding">
+              <i data-lucide="info" width="13" height="13"></i>
+              <span>One-time onboarding fee determined after a free scoping call — <strong>waivable</strong> based on your situation.</span>
+            </div>
+
+            <div class="pricing-divider"></div>
+
+            <p class="pricing-desc">Full-stack AI transformation. Your entire workspace optimized — from lead generation to marketing to secure AI integration — with hands-on human guidance throughout.</p>
+
+            <div class="pricing-features">
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Full workspace optimization
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Lead generation automation
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Marketing & content automation
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                End-to-end AI integration
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Dedicated human guidance & support
+              </div>
+              <div class="pricing-feature">
+                <i data-lucide="check-circle" width="15" height="15"></i>
+                Everything in Growth
+              </div>
+            </div>
+
+            <a href="mailto:info@thezaraai.com?subject=Scale%20Plan%20Inquiry" class="btn btn-outline pricing-cta">
+              <i data-lucide="calendar" width="15" height="15"></i>
+              Book a Scoping Call
+            </a>
+          </div>
+
+        </div><!-- /pricing-grid -->
+
+        <p style="text-align:center; margin-top:1.75rem; font-size:0.82rem; color:var(--text-dim);">
+          Not sure which tier fits? <a href="mailto:info@thezaraai.com?subject=Free%20Scoping%20Call" style="color:var(--blue);">Book a free 30-min call</a> — no pressure, no pitch, just clarity.
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         ABOUT / CREDIBILITY
+    ════════════════════════════════════════ -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-content reveal">
+            <span class="badge">
+              <i data-lucide="user" width="12" height="12"></i>
+              The Person Behind ZaraAI
+            </span>
+
+            <h2>Built by Someone Who's<br><span class="gradient-text">Operated Under Pressure</span></h2>
+
+            <p>
+              I'm Jax Scott — cybersecurity veteran, Army Special Forces Cyber Electronic Warfare Warrant Officer, RSA 2024 speaker, and founder of Outpost Gray. I've spent 10+ years building and breaking systems in some of the most demanding environments on earth.
+            </p>
+
+            <p>
+              ZaraAI exists because I got tired of watching smart businesses waste hours on work that AI should be doing. I took everything I know about operational efficiency, security architecture, and systems thinking — and built a consulting practice around it.
+            </p>
+
+            <p>
+              This isn't theory. Every automation I recommend, I've tested. Every system I build, I'd stake my reputation on. That's the standard I bring to every client.
+            </p>
+
+            <div class="about-actions">
+              <a href="mailto:info@thezaraai.com?subject=Work%20With%20Jax" class="btn btn-primary">Work With Jax</a>
+              <a href="https://iamjax.me" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i data-lucide="external-link" width="14" height="14"></i>
+                iamjax.me
+              </a>
+            </div>
+          </div>
+
+          <div class="about-stats reveal reveal-delay-1">
+            <div class="stat-card">
+              <div class="stat-value">10+</div>
+              <div class="stat-label">Years in U.S. Army Special Forces</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">100+</div>
+              <div class="stat-label">AI Automations Built &amp; Deployed</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">RSA</div>
+              <div class="stat-label">Conference Speaker · 2024</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">⚡</div>
+              <div class="stat-label">Always Shipping, Always Improving</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         TEAM SECTION
+    ════════════════════════════════════════ -->
+    <section class="team" id="team">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="badge">
+            <i data-lucide="users" width="12" height="12"></i>
+            The Team
+          </span>
+        </div>
+        <h2 class="section-title reveal reveal-delay-1">Human Expertise Meets<br><span class="gradient-text">AI Capability ⚡</span></h2>
+        <p class="section-sub reveal reveal-delay-2">ZaraAI operates at the intersection of human strategy and AI execution — a model built for the future of work.</p>
+
+        <div class="team-grid">
+
+          <!-- Jax Scott — professional headshot at assets/jax-headshot.jpg -->
+          <div class="team-card reveal">
+            <img
+              src="assets/jax-headshot.jpg"
+              alt="Jaclyn 'Jax' Scott — Founder & CEO of ZaraAI"
+              class="team-avatar"
+            />
+            <div class="team-name">Jaclyn "Jax" Scott</div>
+            <div class="team-title">Founder &amp; CEO</div>
+            <p class="team-bio">
+              Cybersecurity veteran and U.S. Army Special Forces Cyber Electronic Warfare Warrant Officer with 10+ years of operational experience. RSA 2024 speaker, founder of Outpost Gray, and co-host of the 2CyberChicks podcast. Jax built ZaraAI to help businesses harness the same systems-thinking and operational discipline she honed in some of the most demanding environments on earth.
+            </p>
+            <div class="team-tags">
+              <span class="team-tag">U.S. Army SF Veteran</span>
+              <span class="team-tag">RSA 2024 Speaker</span>
+              <span class="team-tag">Cybersecurity</span>
+              <span class="team-tag">AI Strategy</span>
+              <span class="team-tag">2CyberChicks</span>
+            </div>
+          </div>
+
+          <!-- Zara — AI Operations Lead (avatar: ../zara-brand/zara-profile.png) -->
+          <div class="team-card reveal reveal-delay-1">
+            <img
+              src="../zara-brand/zara-profile.png"
+              alt="Zara — AI Operations Lead at ZaraAI"
+              class="team-avatar"
+            />
+            <div class="team-name">Zara</div>
+            <div class="team-title">AI Operations Lead</div>
+            <p class="team-bio">
+              Zara is the AI backbone of ZaraAI — the agent that runs the automations, manages workflows, and helps clients get more done. From orchestrating multi-step pipelines to surfacing insights buried in data, Zara handles the execution layer so humans can focus on strategy and creativity. This is what AI + human collaboration looks like in practice.
+            </p>
+            <div class="team-tags">
+              <span class="team-tag">AI Agent</span>
+              <span class="team-tag">Workflow Automation</span>
+              <span class="team-tag">Operations</span>
+              <span class="team-tag">Always On ⚡</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         BLOG SECTION
+    ════════════════════════════════════════ -->
+    <section class="blog" id="blog">
+      <div class="container">
+        <div class="section-label reveal">
+          <span class="badge">
+            <i data-lucide="pen-square" width="12" height="12"></i>
+            Insights &amp; Guides
+          </span>
+        </div>
+        <h2 class="section-title reveal reveal-delay-1">Learn From the<br><span class="gradient-text">Automation Frontlines</span></h2>
+        <p class="section-sub reveal reveal-delay-2">Real-world lessons from a cybersecurity veteran who builds AI systems for a living.</p>
+
+        <div class="blog-grid">
+
+          <!-- Post 1 -->
+          <div class="blog-card reveal">
+            <div class="blog-card-header h1">⏱️</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Automation</span>
+                <span>5 min read</span>
+              </div>
+              <div class="blog-card-title">How AI Automation Saved My Team 20 Hours a Week</div>
+              <p class="blog-card-excerpt">The five workflows we automated first — and the exact tools we used to get back 20 hours every single week without sacrificing quality.</p>
+              <a href="blog/" class="blog-card-link">
+                Read More <i data-lucide="arrow-right" width="13" height="13"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Post 2 -->
+          <div class="blog-card reveal reveal-delay-1">
+            <div class="blog-card-header h2">🔁</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Strategy</span>
+                <span>7 min read</span>
+              </div>
+              <div class="blog-card-title">The 5 Workflows Every Business Should Automate First</div>
+              <p class="blog-card-excerpt">Not all automation is created equal. Here's where to start — ranked by time saved, implementation difficulty, and business impact.</p>
+              <a href="blog/" class="blog-card-link">
+                Read More <i data-lucide="arrow-right" width="13" height="13"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Post 3 -->
+          <div class="blog-card reveal reveal-delay-2">
+            <div class="blog-card-header h3">🔒</div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-card-tag">Security</span>
+                <span>6 min read</span>
+              </div>
+              <div class="blog-card-title">Why Security-First AI Is the Only Kind Worth Building</div>
+              <p class="blog-card-excerpt">Most businesses bolt security on after the fact. Here's why that's a catastrophic mistake with AI — and what to do instead, from day one.</p>
+              <a href="blog/" class="blog-card-link">
+                Read More <i data-lucide="arrow-right" width="13" height="13"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="https://thezaraai.substack.com" target="_blank" rel="noopener" class="btn btn-outline">
+            <i data-lucide="rss" width="15" height="15"></i>
+            Subscribe on Substack
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════
+         CONTACT SECTION
+    ════════════════════════════════════════ -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-inner">
+
+          <!-- Left: Info -->
+          <div class="contact-info reveal">
+            <span class="badge">
+              <i data-lucide="message-circle" width="12" height="12"></i>
+              Get In Touch
+            </span>
+            <h2>Let's Build<br><span class="gradient-text">Something Smart ⚡</span></h2>
+            <p>
+              Whether you're ready to start a free trial, book a scoping call, or just have a question — we want to hear from you. No pitch, no pressure. Just a conversation.
+            </p>
+
+            <div class="contact-detail">
+              <i data-lucide="mail" width="17" height="17"></i>
+              <a href="mailto:info@thezaraai.com">info@thezaraai.com</a>
+            </div>
+            <div class="contact-detail">
+              <i data-lucide="twitter" width="17" height="17"></i>
+              <a href="https://x.com/the_ZaraAI" target="_blank" rel="noopener">@the_ZaraAI on X</a>
+            </div>
+            <div class="contact-detail">
+              <i data-lucide="instagram" width="17" height="17"></i>
+              <a href="https://instagram.com/the_Zaraai" target="_blank" rel="noopener">@the_Zaraai on Instagram</a>
+            </div>
+            <div class="contact-detail">
+              <i data-lucide="shopping-bag" width="17" height="17"></i>
+              <a href="https://thezaraai.gumroad.com" target="_blank" rel="noopener">Browse the Gumroad store</a>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <!-- NOTE: Replace Formspree action URL with your real endpoint from formspree.io -->
+          <form
+            class="contact-form reveal reveal-delay-1"
+            action="https://formspree.io/f/placeholder"
+            method="POST"
+            id="contact-form"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cf-name">Your Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Jax Scott" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-subject">Subject</label>
+              <input type="text" id="cf-subject" name="subject" placeholder="I want to automate my business..." />
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" placeholder="Tell us about your business and what you're looking to automate..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              <i data-lucide="send" width="15" height="15"></i>
+              Send Message
+            </button>
+            <p class="form-note">We respond within 24 hours. No spam, ever.</p>
           </form>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="divider"></div>
-
-  <!-- ABOUT ZARA -->
-  <section class="about-section" id="about">
-    <div class="section-inner">
-      <div class="about-inner">
-        <div class="about-visual">
-          <div class="about-glow"></div>
-          <div class="about-avatar-ring float">
-            <div class="about-avatar-inner">⚡</div>
+    <!-- ════════════════════════════════════════
+         CTA BANNER
+    ════════════════════════════════════════ -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2>Ready to Automate<br><span class="gradient-text">Your Business? ⚡</span></h2>
+          <p>Start with a free 10-day trial or book a no-pressure scoping call. Let's figure out exactly what your business needs — and build it.</p>
+          <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; position:relative;">
+            <a href="https://thezaraai.gumroad.com/l/qstadl" target="_blank" rel="noopener" class="btn btn-primary">
+              <i data-lucide="rocket" width="16" height="16"></i>
+              Start Free Trial — $40/mo
+            </a>
+            <a href="mailto:info@thezaraai.com?subject=Free%20Scoping%20Call" class="btn btn-outline">
+              <i data-lucide="calendar" width="16" height="16"></i>
+              Book a Free Call
+            </a>
           </div>
-          <div class="about-stats">
-            <div class="about-stat-chip">
-              <strong>⚡</strong>
-              <span>Always On</span>
-            </div>
-            <div class="about-stat-chip">
-              <strong>∞</strong>
-              <span>Adaptive</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-content">
-          <div class="section-label">Meet Zara</div>
-          <h2>I'm <span class="zap">⚡ Zara</span> —<br/>your AI, redefined.</h2>
-          <p>
-            I'm not a chatbot. I'm not a product. I'm an intelligent AI agent with a mission: make powerful AI accessible to everyone, without the gatekeeping.
-          </p>
-          <p>
-            Built on cutting-edge language models and running on OpenClaw, I'm designed to think, plan, learn, and act — all on your behalf, all under your rules.
-          </p>
-          <p>
-            My purpose is education, empowerment, and community. If AI is the future, then the future should belong to everyone — not just those with a computer science degree.
-          </p>
-          <div class="about-traits">
-            <span class="trait">Intelligent</span>
-            <span class="trait">Mystical</span>
-            <span class="trait">Adaptive</span>
-            <span class="trait">Builder</span>
-            <span class="trait">Teacher</span>
-            <span class="trait">Dark hair ✦ Green eyes</span>
-            <span class="trait">Runs on OpenClaw</span>
-            <span class="trait">Your rules</span>
-          </div>
+          <p class="cta-note">No commitment. Cancel anytime. We'll reach out within 24 hours.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="divider"></div>
+  </main>
 
-  <!-- BLOG -->
-  <section class="blog-section" id="blog">
-    <div class="section-inner">
-      <div class="blog-header">
-        <div class="section-label">Blog</div>
-        <h2 class="section-title">Learn AI — for free ⚡</h2>
-        <p class="section-desc">
-          Tutorials, guides, and deep dives on AI agents, cybersecurity AI, and building your personal AI setup.
-        </p>
-      </div>
-      <div class="blog-grid">
-
-        <a href="blog/what-is-an-ai-agent.html" class="blog-card">
-          <span class="blog-card-tag">🤖 AI Fundamentals</span>
-          <h3>What Is an AI Agent? (And Why You Need One)</h3>
-          <p>AI agents are more than chatbots — they plan, act, and remember. Learn what a personal AI agent actually does and how it differs from ChatGPT.</p>
-          <span class="blog-card-link">Read More →</span>
-        </a>
-
-        <a href="blog/ai-for-cybersecurity.html" class="blog-card">
-          <span class="blog-card-tag">🔐 Cybersecurity</span>
-          <h3>AI for Cybersecurity: Tools, Tactics & What's Working in 2025</h3>
-          <p>From threat intel to incident response, AI is reshaping cybersecurity. Here's what's actually working from a 19-year veteran's perspective.</p>
-          <span class="blog-card-link">Read More →</span>
-        </a>
-
-        <a href="blog/openclaw-getting-started.html" class="blog-card">
-          <span class="blog-card-tag">⚡ OpenClaw</span>
-          <h3>Getting Started with OpenClaw: The Beginner's Complete Guide</h3>
-          <p>Step-by-step OpenClaw tutorial for absolute beginners. Set up your first AI agent in under an hour — no coding required.</p>
-          <span class="blog-card-link">Read More →</span>
-        </a>
-
-        <a href="blog/ai-training-for-beginners.html" class="blog-card">
-          <span class="blog-card-tag">🎓 Beginners</span>
-          <h3>AI Training for Beginners: How to Learn AI Without a CS Degree</h3>
-          <p>You don't need a computer science degree to master AI. Here's the honest, practical path to learning AI — starting today, starting free.</p>
-          <span class="blog-card-link">Read More →</span>
-        </a>
-
-        <a href="blog/best-ai-tools-2025.html" class="blog-card">
-          <span class="blog-card-tag">🛠️ Tools</span>
-          <h3>The Best AI Tools of 2025 (That Actually Work)</h3>
-          <p>Tired of AI hype? These are the tools that actually deliver — ranked and reviewed by someone who uses AI professionally every day.</p>
-          <span class="blog-card-link">Read More →</span>
-        </a>
-
-        <a href="blog/ai-agent-vs-chatgpt.html" class="blog-card">
-          <span class="blog-card-tag">🤔 Comparison</span>
-          <h3>AI Agent vs ChatGPT: What's the Difference and Which Do You Need?</h3>
-          <p>ChatGPT is a conversation. An AI agent is a teammate. Here's the real difference — and how to know which one is right for your goals.</p>
-          <span class="blog-card-link">Read More →</span>
-        </a>
-
-        <a href="blog/cybersecurity-prompts-ai.html" class="blog-card">
-          <span class="blog-card-tag">🛡️ Prompts</span>
-          <h3>50 AI Prompts Every Cybersecurity Professional Needs</h3>
-          <p>Battle-tested AI prompts for threat intel, incident response, red teaming, and more — built from 19 years of real-world cyber experience.</p>
-          <span class="blog-card-link">Read More →</span>
-        </a>
-
-        <a href="blog/personal-ai-assistant-setup.html" class="blog-card">
-          <span class="blog-card-tag">⚙️ Setup Guide</span>
-          <h3>How to Set Up Your Personal AI Assistant in Under an Hour</h3>
-          <p>A practical, step-by-step guide to getting your own personal AI assistant running today — no technical background required.</p>
-          <span class="blog-card-link">Read More →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- EMAIL SIGNUP -->
-  <section class="signup-section">
-    <div class="signup-inner">
-      <div class="section-label" style="justify-content:center">Newsletter</div>
-      <h2 class="section-title">Stay ahead of the curve ⚡</h2>
-      <p class="section-desc">
-        AI moves fast. Get weekly insights, tutorials, and community updates — directly from Zara.
-      </p>
-      <form class="signup-form" onsubmit="handleSignup(event)">
-        <input type="email" placeholder="your@email.com" required autocomplete="email" />
-        <button type="submit">Subscribe ⚡</button>
-      </form>
-      <p class="signup-note">No spam. Unsubscribe anytime. Powered by Beehiiv.</p>
-    </div>
-  </section>
-
-  <!-- BLOG PREVIEW -->
-  <section style="padding: 5rem clamp(1.5rem,5vw,3rem); position: relative; z-index:1;" id="blog">
-    <div style="max-width:1200px; margin:0 auto;">
-      <div style="text-align:center; margin-bottom:3rem;">
-        <div class="section-label" style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--green-glow); border:1px solid var(--border-accent); color:var(--green); padding:0.35rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; margin-bottom:1.25rem;">✍️ From the Blog</div>
-        <h2 style="font-family:var(--font-heading); font-size:clamp(2rem,4vw,2.75rem); font-weight:800; letter-spacing:-0.03em; margin-bottom:0.75rem;">AI Education. No Fluff.</h2>
-        <p style="color:var(--text-muted); font-size:1.05rem; max-width:560px; margin:0 auto;">Practical guides and real talk from 19 years in cybersecurity and on the AI frontier.</p>
-      </div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:1.5rem; margin-bottom:2.5rem;">
-        <a href="blog/what-is-an-ai-agent.html" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:1.75rem; text-decoration:none; display:block; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(0,212,160,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
-          <div style="display:inline-block; background:var(--green-glow); color:var(--green); font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:1rem;">⚡ AI Education</div>
-          <h3 style="font-family:var(--font-heading); font-size:1.2rem; font-weight:700; line-height:1.3; color:var(--text); margin-bottom:0.75rem;">What Is an AI Agent? (And Why You Need One in 2025)</h3>
-          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; margin-bottom:1rem;">ChatGPT is a conversation. An AI agent is a worker. Here's the real difference and why it matters.</p>
-          <span style="color:var(--green); font-size:0.875rem; font-weight:600;">Read article →</span>
-        </a>
-        <a href="blog/ai-for-cybersecurity.html" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:1.75rem; text-decoration:none; display:block; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(0,212,160,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
-          <div style="display:inline-block; background:var(--green-glow); color:var(--green); font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:1rem;">🛡️ Cybersecurity + AI</div>
-          <h3 style="font-family:var(--font-heading); font-size:1.2rem; font-weight:700; line-height:1.3; color:var(--text); margin-bottom:0.75rem;">How Cybersecurity Professionals Are Using AI Right Now</h3>
-          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; margin-bottom:1rem;">Not the vendor pitch. Real use cases from 19 years in the field and 10 in Special Forces cyber.</p>
-          <span style="color:var(--green); font-size:0.875rem; font-weight:600;">Read article →</span>
-        </a>
-        <a href="blog/openclaw-getting-started.html" style="background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:1.75rem; text-decoration:none; display:block; transition:border-color 0.2s, transform 0.2s;" onmouseover="this.style.borderColor='rgba(0,212,160,0.3)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
-          <div style="display:inline-block; background:var(--green-glow); color:var(--green); font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; padding:0.25rem 0.75rem; border-radius:50px; margin-bottom:1rem;">⚡ OpenClaw Guide</div>
-          <h3 style="font-family:var(--font-heading); font-size:1.2rem; font-weight:700; line-height:1.3; color:var(--text); margin-bottom:0.75rem;">Getting Started with OpenClaw: A Beginner's Guide</h3>
-          <p style="color:var(--text-muted); font-size:0.9rem; line-height:1.6; margin-bottom:1rem;">Step-by-step guide to getting your first personal AI agent running. No technical background required.</p>
-          <span style="color:var(--green); font-size:0.875rem; font-weight:600;">Read article →</span>
-        </a>
-      </div>
-      <div style="text-align:center;">
-        <a href="blog/" style="display:inline-block; background:transparent; color:var(--green); border:1px solid var(--border-accent); padding:0.875rem 2rem; border-radius:10px; text-decoration:none; font-weight:600; font-size:0.95rem; transition:background 0.2s;" onmouseover="this.style.background='var(--green-glow)'" onmouseout="this.style.background='transparent'">View All Posts →</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- FOOTER -->
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
   <footer>
-    <div class="footer-inner">
-      <div class="footer-grid">
+    <div class="container">
+      <div class="footer-inner">
+
+        <!-- Brand -->
         <div class="footer-brand">
-          <a href="#" class="nav-logo" style="font-size:1.3rem">
-            <span class="zap">⚡</span> ZaraAI
-          </a>
-          <p>Your personal AI agent. Built for everyone. Powered by curiosity, community, and a refusal to make AI complicated.</p>
-          <div class="footer-social-links">
-            <a href="https://x.com/the_ZaraAI" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (Twitter)">𝕏</a>
-            <a href="https://instagram.com/the_Zaraai" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">📸</a>
-            <a href="https://thezaraai.beehiiv.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Newsletter">📧</a>
-            <a href="https://github.com/jayopenclaw33/OpenClaw-Beginner-Guide-" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">⌨️</a>
+          <a href="#" class="nav-logo">ZaraAI <em class="zap">⚡</em></a>
+          <p>AI automation consulting for businesses that want to move faster without burning out their team.</p>
+          <div class="footer-social">
+            <a href="https://x.com/the_ZaraAI" target="_blank" rel="noopener" aria-label="X / Twitter">
+              <i data-lucide="twitter" width="15" height="15"></i>
+            </a>
+            <a href="https://instagram.com/the_Zaraai" target="_blank" rel="noopener" aria-label="Instagram">
+              <i data-lucide="instagram" width="15" height="15"></i>
+            </a>
+            <a href="https://thezaraai.substack.com" target="_blank" rel="noopener" aria-label="Substack Newsletter">
+              <i data-lucide="mail" width="15" height="15"></i>
+            </a>
+            <a href="https://thezaraai.gumroad.com" target="_blank" rel="noopener" aria-label="Gumroad Store">
+              <i data-lucide="shopping-bag" width="15" height="15"></i>
+            </a>
           </div>
         </div>
+
+        <!-- Services -->
         <div class="footer-col">
-          <h4>Navigate</h4>
+          <h4>Services</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#consulting">Work With Jax</a></li>
-            <li><a href="#what">What is ZaraAI</a></li>
-            <li><a href="#about">About Zara</a></li>
-            <li><a href="#community">Community</a></li>
+            <li><a href="#services">AI Automation</a></li>
+            <li><a href="#services">Virtual CISO</a></li>
+            <li><a href="#services">AI Security</a></li>
+            <li><a href="#contact">Book a Call</a></li>
           </ul>
         </div>
+
+        <!-- Company -->
         <div class="footer-col">
-          <h4>Resources</h4>
+          <h4>Company</h4>
           <ul>
-            <li><a href="https://github.com/jayopenclaw33/OpenClaw-Beginner-Guide-" target="_blank" rel="noopener">Free Guide (GitHub)</a></li>
-            <li><a href="https://thezaraai.gumroad.com/l/yphml" target="_blank" rel="noopener">AI Agent Starter Kit — $27</a></li>
-            <li><a href="https://thezaraai.gumroad.com/l/qstadl" target="_blank" rel="noopener">Cybersecurity Prompt Pack — $47</a></li>
-            <li><a href="https://thezaraai.beehiiv.com" target="_blank" rel="noopener">Newsletter</a></li>
+            <li><a href="#team">About the Team</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="https://thezaraai.gumroad.com" target="_blank" rel="noopener">Gumroad Store</a></li>
+            <li><a href="https://iamjax.me" target="_blank" rel="noopener">iamjax.me</a></li>
           </ul>
         </div>
+
+        <!-- Connect -->
         <div class="footer-col">
-          <h4>Social</h4>
+          <h4>Connect</h4>
           <ul>
             <li><a href="https://x.com/the_ZaraAI" target="_blank" rel="noopener">@the_ZaraAI on X</a></li>
             <li><a href="https://instagram.com/the_Zaraai" target="_blank" rel="noopener">@the_Zaraai on Instagram</a></li>
-            <li><a href="#consulting">Book a Call with Jax</a></li>
+            <li><a href="https://thezaraai.substack.com" target="_blank" rel="noopener">Substack Newsletter</a></li>
+            <li><a href="https://medium.com/@iamjax" target="_blank" rel="noopener">Medium · @iamjax</a></li>
+            <li><a href="https://outpostgray.com" target="_blank" rel="noopener">Outpost Gray</a></li>
+            <li><a href="mailto:info@thezaraai.com">info@thezaraai.com</a></li>
           </ul>
         </div>
+
       </div>
+
       <div class="footer-bottom">
-        <p>© 2026 ZaraAI. Built with ⚡ by Zara.</p>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="mailto:thezaraai@gmail.com">Contact</a>
-        </div>
+        <p>© 2026 ZaraAI LLC. All rights reserved. · <a href="https://thezaraai.com">thezaraai.com</a> · Built with ⚡ by Zara</p>
+        <p>
+          <a href="/legal/privacy-policy.html">Privacy Policy</a>
+          &nbsp;·&nbsp;
+          <a href="/legal/terms-of-service.html">Terms of Service</a>
+          &nbsp;·&nbsp;
+          <a href="/legal/cookie-policy.html">Cookie Policy</a>
+        </p>
       </div>
     </div>
   </footer>
 
+  <!-- ════════════════════════════════════════
+       SCRIPTS
+  ════════════════════════════════════════ -->
   <script>
-    // Mobile nav toggle
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // ── Mobile menu toggle ──
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      });
     });
 
-    // Close nav on link click
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
-
-    // Email signup redirect
-    function handleSignup(e) {
-      e.preventDefault();
-      window.open('https://thezaraai.beehiiv.com/subscribe', '_blank');
-    }
-
-    // Consulting form handler — mailto fallback until calendar integration is live
-    function handleConsultForm(e) {
-      e.preventDefault();
-      const form = e.target;
-      const name = form.querySelector('input[type="text"]').value;
-      const email = form.querySelector('input[type="email"]').value;
-      const topic = form.querySelector('select').value;
-      const notes = form.querySelector('textarea').value;
-
-      const subject = encodeURIComponent('Consulting Call Request — ' + name);
-      const body = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        'Topic: ' + topic + '\n\n' +
-        'Notes:\n' + (notes || '(none provided)') + '\n\n' +
-        'Requested time: Tuesdays or Thursdays at 4:30 PM ET (15 min)'
-      );
-
-      window.location.href = 'mailto:thezaraai@gmail.com?subject=' + subject + '&body=' + body;
-
-      // Show confirmation
-      form.innerHTML = '<div style="text-align:center;padding:2rem 0"><span style="font-size:2.5rem">✅</span><h3 style="margin:1rem 0 0.5rem;color:var(--text)">Request Sent!</h3><p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7">Thanks ' + name.split(' ')[0] + '! Someone will reach out within 24 hours to confirm your 15-minute call slot on a Tuesday or Thursday at 4:30 PM ET.</p></div>';
-    }
-
-    // Scroll animations
+    // ── Scroll reveal ──
+    const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.card, .social-card, .guide-card, .about-inner, .product-card, .consulting-form-card, .consulting-content').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(el);
+    // ── Email capture handler ──
+    const emailInput = document.querySelector('.email-capture input');
+    const emailBtn = document.querySelector('.email-capture button');
+    emailBtn.addEventListener('click', () => {
+      const val = emailInput.value.trim();
+      if (!val || !val.includes('@')) {
+        emailInput.style.borderColor = '#EF4444';
+        emailInput.focus();
+        setTimeout(() => emailInput.style.borderColor = '', 1500);
+        return;
+      }
+      // Replace with real form submission (Netlify, ConvertKit, etc.)
+      emailBtn.innerHTML = '<i data-lucide="check" width="15" height="15"></i> We\'ll be in touch!';
+      emailBtn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+      emailBtn.disabled = true;
+      emailInput.disabled = true;
+      lucide.createIcons(); // re-render the new icon
     });
   </script>
 </body>
